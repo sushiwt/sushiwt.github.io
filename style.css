@@ -3,7 +3,6 @@ body {
   color: white;
   font-family: "minitext";
   margin:0px;
-  overflow:hidden;
 }
 
 a {
@@ -21,11 +20,17 @@ a {
     border-radius: 10px;
     border-style: solid;
     border-color: #FFF;
+    margin:auto;
+    height:450px;
 }
 
 hr {
     box-shadow: 0 2px 10px 0 #FFF;
     color: #FFF;
+}
+
+p.big-p {
+  font-size:20px;
 }
 
 /* topbar section ahagha */
@@ -99,7 +104,7 @@ a:hover {
 /* the gap behind the navbar*/
 
 div.huge-gap {
-  margin-bottom:140px
+  margin-bottom:160px
 }
 
 
@@ -121,7 +126,6 @@ div.huge-gap {
 /* the footer */
 
 div.footer {
-  font-style: bold;
   position:fixed;
   background-color:#FFF;
   color:#000;
