@@ -1,5 +1,7 @@
 body {
   background-color: #000000;
+  background-image: url("/images/stars.png");
+  background-repeat: repeat;
   color: white;
   font-family: "minitext";
   margin:0px;
