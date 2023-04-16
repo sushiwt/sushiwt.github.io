@@ -33,6 +33,10 @@ p.big-p {
   font-size:20px;
 }
 
+p.bigger-p {
+  font-size:30px
+}
+
 /* topbar section ahagha */
 
 section.topbar-wrapper {
