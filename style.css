@@ -45,7 +45,6 @@ section.topbar-wrapper {
   box-shadow: 0 0 10px 0 #FFF;
   padding:10px;
   border:solid;
-  position:fixed;
   top: 0;
   background-color: #FFF;
 }
