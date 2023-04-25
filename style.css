@@ -161,3 +161,36 @@ div.footer {
   width:100%;
   box-shadow: 0 0 10px 0 #FFF;
 }
+
+div.game-button {
+  border-radius:10px;
+  background-color: #FFF;
+  width:fit-content;
+  padding:25px;
+  color:black;
+  font-size:25px;
+  box-shadow: 0 0 10px 0 #FFF;
+}
+
+.game-grid {
+  display: flex;
+  margin:0;
+}
+
+.game-image {
+  box-shadow: 0 0 10px 0 #000; 
+  border-radius:10px; 
+  border-style:solid; 
+  border-color:black;
+}
+
+.game-button:hover {
+  transition: background-color 0.1s linear;
+  transform: scale(1.025);
+  background-color:#000;
+  border-width: 10px;
+  border-color:#FFF;
+  color:white;
+  box-shadow: 0 0 15px 0 #FFF;
+}
+
