@@ -1,0 +1,18 @@
+/* the font part!!! */
+
+/* @font-face {
+    font-family: 'minitext';
+    src: url(/webfontkit-20230405-063803/minitext-webfont.woff);
+} */
+
+body {
+    font-family: 'minitext';
+    font-size: 32px
+}
+
+/* */
+
+body {
+    color: white;
+    background-color: black;
+}
