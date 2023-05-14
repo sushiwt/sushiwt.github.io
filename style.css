@@ -1,18 +1,66 @@
-/* the font part!!! */
-
-/* @font-face {
-    font-family: 'minitext';
-    src: url(/webfontkit-20230405-063803/minitext-webfont.woff);
-} */
-
-body {
-    font-family: 'minitext';
-    font-size: 32px
-}
-
-/* */
-
-body {
-    color: white;
-    background-color: black;
-}
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --radius: 15px;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--black);
+    color: var(--white);
+    font-family:monospace;
+  }
+  
+  a {
+    text-decoration-style: dashed;
+    text-decoration-thickness: 1px;
+    color: black;
+  }
+  
+  .rect {
+    border-radius: var(--radius);
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+    padding: 15px;
+    width: fit-content;
+    height: fit-content;
+    min-width: 0px;
+    text-align:center;
+  }
+  
+  .black {
+    background-color: var(--black);
+    color: var(--white);
+  }
+  
+  .white {
+    background-color: var(--white);
+    color: var(--black);
+  }
+  
+  .shadow {
+    box-shadow: 0 0 10px 0 #9c9c9c;
+  }
+  
+  .widen {
+    width:100px;
+  }
+  
+  .button:hover {
+    transition: background-color 0.1s linear;
+    color: var(--white);
+    background-color: var(--black);
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-left:75px;
+    margin-right:75px;
+  }
+  
+  .large {
+    font-size:20px;
+  }
