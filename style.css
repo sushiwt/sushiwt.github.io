@@ -8,7 +8,10 @@
     margin: 0;
     background-color: var(--black);
     color: var(--white);
-    font-family:monospace;
+    font-family: monospace;
+    transition: filter 0.5s ease-in-out;
+    background-image: url("/images/stars.png");
+    background-repeat: repeat;
   }
   
   a {
@@ -48,9 +51,10 @@
   }
   
   .button:hover {
-    transition: background-color 0.1s linear;
+    transition: background-color 0.1s linear, transform 1s ease-out;
     color: var(--white);
     background-color: var(--black);
+    transform: translate(10)
   }
   
   .flex {
