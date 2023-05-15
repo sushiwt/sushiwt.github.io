@@ -12,6 +12,7 @@
     transition: filter 0.5s ease-in-out;
     background-image: url("/images/stars.png");
     background-repeat: repeat;
+    font-size: 25px;
   }
   
   a {
