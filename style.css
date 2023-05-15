@@ -28,8 +28,8 @@
     padding: 8px 10px 8px 10px;
     width: fit-content;
     height: fit-content;
-    min-width: 0px;
     text-align:center;
+    min-width:60px;
   }
   
   .black {
