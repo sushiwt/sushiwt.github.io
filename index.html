@@ -7,63 +7,22 @@
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
-    <div class="shadow" style="background-color:var(--white); color: var(--black); padding:10px;">
-      <div class="flex">
-        <div class="black rect flex" style="border-radius:30px; margin:0;">
-          <img src="https://sushiwt.github.io/images/slooshi.png" width="75px" alt="slooshi!">
-          <p>&nbsp;&nbsp;</p>
-          <p class="large">sushiwt/index</p>
-        </div>
-        <div class="flex center">
-          <a class="white rect shadow button">/index</a>
-          <p>&nbsp;&nbsp;</p>
-          <a class="white rect shadow button">/blog</a>
-          <p>&nbsp;&nbsp;</p>
-          <a class="white rect shadow button">/contacts</a>
-          <p>&nbsp;&nbsp;</p>
-          <a class="white rect shadow button">/games</a>
-          <p>&nbsp;&nbsp;</p>
-          <a class="white rect shadow button">/art</a>
-        </div>
-
-        <div>
-            <button class="black rect shadow button" onclick="toggleInversion()" style="box-shadow:none; border-color:black; font-family:monospace;">Change to Light</button>
-            <script>
-                function toggleInversion() {
-                    const body = document.querySelector('body');
-                    const currentFilter = body.style.filter;
-                    const button = document.querySelector('button');
-                    if (currentFilter === 'invert(100%)') {
-                    body.style.filter = 'invert(0%)';
-                    button.textContent = 'Change to Light';
-                    } else {
-                    body.style.filter = 'invert(100%)';
-                    button.textContent = 'Change to Dark';
-                    }
-                }
-            </script>
-        </div>
-    </div>
-    </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-a
+    
+    <div id="navbar"></div>
+    <script>
+      fetch('/misc/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          const navbarContainer = document.getElementById('navbar');
+          navbarContainer.innerHTML = data;
+          const scriptElement = document.createElement('script');
+          scriptElement.textContent = `//add any script here//`;
+          navbarContainer.appendChild(scriptElement);
+          const navbarTitle = document.getElementById('navbar-title');
+          const desiredTitle = "sushiwt/index";
+          navbarTitle.textContent = desiredTitle;
+        });    
+    </script>
+    
   </body>
 </html>
