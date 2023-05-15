@@ -50,7 +50,7 @@
   }
   
   .button:hover {
-    transition: background-color 0.1s linear, transform 1s ease-out;
+    transition: background-color 0.1s linear, transform 0.25s ease-out;
     color: var(--white);
     background-color: var(--black);
     transform: translate(10)
