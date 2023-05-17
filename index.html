@@ -17,7 +17,15 @@
           const navbarContainer = document.getElementById('navbar');
           navbarContainer.innerHTML = data;
           const scriptElement = document.createElement('script');
-          scriptElement.textContent = `//add any script here//`;
+          scriptElement.textContent = `
+          document.addEventListener('mousemove', function(event) {
+          var box = document.getElementById('box');
+          var x = event.clientX;
+          var y = event.clientY;
+          box.style.left = x + 'px';
+          box.style.top = y + 'px';
+        });
+          `;
           navbarContainer.appendChild(scriptElement);
           const navbarTitle = document.getElementById('navbar-title');
           const desiredTitle = "sushiwt/index";

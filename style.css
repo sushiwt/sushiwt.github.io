@@ -10,11 +10,18 @@
     color: var(--white);
     font-family: minitext;
     transition: filter 0.5s ease-in-out;
+    animation: scroll 120s linear infinite;
     background-image: url("/images/stars.png");
     background-repeat: repeat;
+    background-position: 0 0;
     font-size: 25px;
   }
-  
+
+  @keyframes scroll {
+    0% { background-position: 0 0; }
+    100% { background-position: -2000px 0; }
+  }
+
   a {
     text-decoration: none;
     color: black;
@@ -68,4 +75,24 @@
   .large {
     font-size:35px;
     margin: 0;
+  }
+
+  /* rahhh info boxes for the nav */
+
+  #indexinfo {
+    position: fixed;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    pointer-events: none; 
+    transform: translate(-50%, calc(100% + 10px)); 
+  }
+  
+  #indexinfo {
+    display: none; 
+    margin-top: 0px;
+  }
+  
+  button:hover + #indexinfo {
+    display: block;
   }
