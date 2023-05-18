@@ -1,0 +1,79 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --radius: 15px;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--black);
+    color: var(--white);
+    font-family: minitext;
+    transition: filter 0.5s ease-in-out;
+    animation: scroll 120s linear infinite;
+    background-image: url("/images/stars.png");
+    background-repeat: repeat;
+    background-position: 0 0;
+    font-size: 25px;
+  }
+
+  @keyframes scroll {
+    0% { background-position: 0 0; }
+    100% { background-position: -2000px 0; }
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .rect {
+    border-radius: var(--radius);
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+    padding: 8px 10px 8px 10px;
+    width: fit-content;
+    height: fit-content;
+    text-align:center;
+    min-width:60px;
+  }
+  
+  .black {
+    background-color: var(--black);
+    color: var(--white);
+  }
+  
+  .white {
+    background-color: var(--white);
+    color: var(--black);
+  }
+  
+  .shadow {
+    box-shadow: 0 0 10px 0 #9c9c9c;
+  }
+  
+  .widen {
+    width:100px;
+  }
+  
+  .button:hover {
+    transition: background-color 0.1s linear, transform 0.25s ease-out;
+    color: var(--white);
+    background-color: var(--black);
+    transform: translate(0px, -5px)
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-left:75px;
+    margin-right:75px;
+  }
+  
+  .large {
+    font-size:35px;
+    margin: 0;
+  }
+
