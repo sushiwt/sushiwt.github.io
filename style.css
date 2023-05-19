@@ -26,6 +26,10 @@
     text-decoration: none;
     color: black;
   }
+
+  .no-margin {
+    margin:0;
+  }
   
   .rect {
     border-radius: var(--radius);
@@ -63,6 +67,10 @@
     background-color: var(--black);
     transform: translate(0px, -5px)
   }
+
+  div.button:hover p {
+    color: var(--white);
+  }
   
   .flex {
     display: flex;
@@ -77,3 +85,13 @@
     margin: 0;
   }
 
+  .image {
+    width:90%; 
+    margin-top:10px; 
+    border-radius: 20px;
+  }
+
+  .image-button {
+    width:200px; 
+    margin:10px;
+  }
