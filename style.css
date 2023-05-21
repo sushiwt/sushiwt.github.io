@@ -14,7 +14,7 @@
     background-image: url("/images/stars.png");
     background-repeat: repeat;
     background-position: 0 0;
-    font-size: 25px;
+    font-size:18px;
   }
 
   @keyframes scroll {
