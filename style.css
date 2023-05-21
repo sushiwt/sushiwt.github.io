@@ -32,6 +32,10 @@
     color: black;
   }
 
+  p {
+    line-height: 1.5;
+  }
+
   .no-margin {
     margin:0;
   }
