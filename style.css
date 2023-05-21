@@ -4,11 +4,6 @@
     --radius: 15px;
   }
   
-  @font-face {
-    font-family: 'minitext';
-    src: url(/minitext-font/minitext-webfont.woff);
-  }
-
   body {
     margin: 0;
     background-color: var(--black);
