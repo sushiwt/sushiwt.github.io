@@ -17,6 +17,11 @@
     font-size:18px;
   }
 
+  @font-face {
+    font-family: 'minitext';
+    src: url(/minitext-font/minitext-webfont.woff);
+    }
+
   @keyframes scroll {
     0% { background-position: 0 0; }
     100% { background-position: -2000px 0; }
