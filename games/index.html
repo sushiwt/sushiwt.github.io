@@ -83,13 +83,15 @@
 	  </div>
     <br>
 	
-    <div align="center">
-    <div class="white rect shadow"> 
-        <div>&nbsp;made by sushiwt, 2023&nbsp;|&nbsp;
-          <a href="http://sushiwhytee.neocities.org" target=”_blank” style="text-decoration:underline">visit old site</a>
-            &nbsp;|&nbsp; built with firefox and vscode&nbsp;</div>
-        </div>
-    </div>
+    <div id="footer"></div>
+    <script>
+      fetch('/misc/footer.html')
+        .then(response => response.text())
+        .then(data => {
+          const footerContainer = document.getElementById('footer');
+          footerContainer.innerHTML = data;
+        });    
+    </script>
     <br>
   </body>
 </html>
