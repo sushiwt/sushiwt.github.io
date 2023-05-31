@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>sushiwt/about</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="/images/favicon/index.ico">
+  </head>
+  <body>
+
+    <div id="navbar"></div>
+    <script>
+      fetch('/misc/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          const navbarContainer = document.getElementById('navbar');
+          navbarContainer.innerHTML = data;
+          const scriptElement = document.createElement('script');
+          scriptElement.textContent = ``;
+          navbarContainer.appendChild(scriptElement);
+          const navbarTitle = document.getElementById('navbar-title');
+          const desiredTitle = "sushiwt/about";
+          navbarTitle.textContent = desiredTitle;
+        });    
+    </script>
+    
+    <div align="center">
+      <br>
+      <div class="black rect shadow" style="width:500px">
+        <p class="large">-- about myself --</p>
+        <p class="big-p">
+          Name: my username is sushiwt, but peeps <br> mainly call me sushi :D<br><br>
+          Age: I am 15 years of age... (October 14th, 2007)<br><br>
+          Gender: I am a (transgender) female (she/her)<br><br>
+          Relationship Status: I'm single T-T (and bisexual, <br>so like, I'm losing on both teams…)
+        </p>
+      </div>
+    </div>
+    <div align="center">
+      <br>
+      <div class="black rect shadow" style="width:640px">
+        <p class="large">-- what i like --</p>
+        <p class="big-p">
+          I LOVE video games, mostly first person shooters (like Half Life, Portal, <br> 
+          Super Mario Odyssey), but I can enjoy playing any video game genre! <br>
+          <br>
+          I'm also a HUGE fangirl for Valve (the “””“game”””” company)!!!       
+        </p>
+      </div>
+    </div>
+    <div align="center">
+      <br>
+      <div class="black rect shadow" style="width:640px">
+        <p class="large">-- things that i do (and what i am learning rn) --</p>
+        <p class="big-p">
+          I can code games and websites, make 3d models of random stuff, <br>
+          do drawing, and animate, but I mostly code and 3d model… <br>
+          <br>
+          I am currently learning JavaScript, a scripting language used for websites <br>
+          (there's actually a little bit of javascript being used in this site :>) and <br> 
+          GDScript, which is the programming language that Godot, a game engine, uses. <br>
+        </p>
+      </div>
+    </div>
+    <div align="center">
+      <br>
+      <div class="black rect shadow" style="width:640px">
+        <p class="large">-- what i use to create my stuff --</p>
+        <p class="big-p">
+          I use Clickteam Fusion 2.5 to code my games,  but I'm slowly leaving it for <br> 
+          Godot, because of...well, I dont know actually.... <br>
+          <br>
+          I use Blender to create my 3d models, but I am still learning how to use it… <br>
+          (I know how to texture and model and stuff, but I still don't know how to use scripts, or compositing, or rigging :<) <br>
+          <br>
+          For computers, I use a Microsoft Surface Go 2 for stuff like animating <br>
+          and drawing, while I use a MacBook Pro to 3d model and code the website<br> 
+          you are using right now!! <br>
+        </p>
+      </div>
+    </div>
+
+    <br>
+    <div id="footer"></div>
+    <script>
+      fetch('/misc/footer.html')
+        .then(response => response.text())
+        .then(data => {
+          const footerContainer = document.getElementById('footer');
+          footerContainer.innerHTML = data;
+        });    
+    </script>
+    <br>
+
+  </body>
+</html>
