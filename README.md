@@ -5,7 +5,7 @@ hello! this is the repository of the sushiwt neocities site; well formerly the n
 
 - /index, the home page
 - /blog, where my tumblr page is
-- /contacts, all the (public) contacts made by me
+- /about, everything there is to know about me!
 - /games, all the games i created
 - /art, all the art i created
 
