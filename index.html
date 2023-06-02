@@ -1,73 +1,76 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>sushiwt/index</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="icon" type="image/x-icon" href="/images/favicon/index.ico">
-  </head>
-  <body>
 
-    <div id="navbar"></div>
-    <script>
-      fetch('/misc/navbar.html')
-        .then(response => response.text())
-        .then(data => {
-          const navbarContainer = document.getElementById('navbar');
-          navbarContainer.innerHTML = data;
-          const scriptElement = document.createElement('script');
-          scriptElement.textContent = ``;
-          navbarContainer.appendChild(scriptElement);
-          const navbarTitle = document.getElementById('navbar-title');
-          const desiredTitle = "sushiwt/index";
-          navbarTitle.textContent = desiredTitle;
-        });    
-    </script>
-    <center>      
-      <img src="/images/big-slooshi.png" style="
+<head>
+  <title>sushiwt/index</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="icon" type="image/x-icon" href="/images/favicon/index.ico">
+</head>
+
+<body>
+
+  <div id="navbar"></div>
+  <script>
+    fetch('/misc/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        const navbarContainer = document.getElementById('navbar');
+        navbarContainer.innerHTML = data;
+        const scriptElement = document.createElement('script');
+        scriptElement.textContent = ``;
+        navbarContainer.appendChild(scriptElement);
+        const navbarTitle = document.getElementById('navbar-title');
+        const desiredTitle = "sushiwt/index";
+        navbarTitle.textContent = desiredTitle;
+      });    
+  </script>
+  <center>
+    <img src="/images/big-slooshi.png" style="
       width: 185px;
       translate: -425px;
       position:absolute;
       z-index: 1;
       ">
-    </center>
-    <div align="center">
-      <br>
-      <div class="black rect shadow" style="width:640px">
-        <p class="large">welcome to my (black and white) lair...</p>
-        <p>
-          i'm sushiwt, aka sushi, and welcome to my website!
-          <br>
-          <br>
-          here, you can find stuff /about myself, play /games that i <br> 
-          have created, and read stuff that i post on my /blog!
-          <br>
-          <p class="large">i hope you enjoy your stay here :D</p>
-          (btw, the gal on the right is my online persona, slooshi)
-          </p>
+  </center>
+  <div align="center">
+    <br>
+    <div class="black rect shadow" style="width:640px">
+      <p class="large">welcome to my (black and white) lair...</p>
+      <p>
+        i'm sushiwt, aka sushi, and welcome to my website!
+        <br>
+        <br>
+        here, you can find stuff /about myself, play /games that i <br>
+        have created, and read stuff that i post on my /blog!
+        <br>
+      <p class="large">i hope you enjoy your stay here :D</p>
+      (btw, the gal on the right is my online persona, slooshi)
+      </p>
+      </p>
+      <img src="/images/twr.png" width="550px">
+    </div>
+    <div style="perspective: 1000px;">
+      <div class="black rect shadow" style="width:900px; margin-top: -68px; transform: rotate3d(1, 0, 0, 45deg);">
+        <p class="large">
+          if you want to explore, feel free to use the buttons <br>
+          in the navigation bar! they can get you to the 5 /sections.
         </p>
-        <img src="/images/twr.png" width="550px">
-      </div>
-      <div style="perspective: 1000px;">
-        <div class="black rect shadow" style="width:900px; margin-top: -68px; transform: rotate3d(1, 0, 0, 45deg);">
-          <p class="large">
-            if you want to explore, feel free to use the buttons <br> 
-            in the navigation bar! they can get you to the 5 /sections.
-          </p>
-        </div>
       </div>
     </div>
-    <br>
-    <div id="footer"></div>
-    <script>
-      fetch('/misc/footer.html')
-        .then(response => response.text())
-        .then(data => {
-          const footerContainer = document.getElementById('footer');
-          footerContainer.innerHTML = data;
-        });    
-    </script>
-    <br>
-  </body>
+  </div>
+  <br>
+  <div id="footer"></div>
+  <script>
+    fetch('/misc/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        const footerContainer = document.getElementById('footer');
+        footerContainer.innerHTML = data;
+      });    
+  </script>
+  <br>
+</body>
+
 </html>
