@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>sushiwt/about</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="/images/favicon/index.ico">
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfJkl4mAAAAAKJWkA3-WVg6LKM60WT1JI0z-Ch2"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LfJkl4mAAAAAKJWkA3-WVg6LKM60WT1JI0z-Ch2', {action: 'submit'}).then(function (token) {
+                console.info("got token: " + token);
+                document.getElementById('g-recaptcha-response').value = token;
+            });
+        });
+    </script>
+  </head>
+  <body>
+    <br>
+  <div>
+    <div align="center">
+        <form action="https://formspree.io/f/mgebbgay" method="POST" class="black rect shadow" style="padding:20px;">
+            <p style="font-size:30px; margin:0;">- the /ask section -</p>
+            <br>
+            <label>
+            &nbsp;&nbsp;give me feedback, ask me stuff, and i will respond (on my tumblr!)&nbsp;&nbsp;
+            </label>
+            <br>
+            <br>
+            <div align="center">
+            <div class="white rect shadow">
+                <p style="margin-top:10px;"">
+                    your name (optional): <br>
+                </p>
+                <input type="name" name="name" class="white rect shadow">
+            </div>
+            <br>
+            <div class="white rect shadow">
+                <p style="margin-top:10px;">
+                    your message to me: 
+                </p>
+                <textarea name="message" placeholder="type anything here" class="white rect shadow"></textarea>
+            </div>
+            </div>
+            <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+            <br>
+            <button type="submit" class="white rect shadow button" style="font-family: 'minitext'; font-size:20px;" href="sujebkvdsnskn">submit!</button>
+        </form>
+    </div>
+    </div>
+  </body>
+</html>
