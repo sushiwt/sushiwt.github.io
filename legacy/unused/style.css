@@ -1,8 +1,12 @@
 body {
   background-color: #000000;
   color: white;
-  font-family: "minitext";
-  
+  font-family: 'minitext'; 
+}
+
+@font-face {
+  font-family: 'minitext';
+  src: url(/minitext-font/minitext-webfont.woff);
 }
 
 
