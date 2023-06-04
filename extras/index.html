@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>sushiwt/extras</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="icon" type="image/x-icon" href="/images/favicon/extras.ico">
+</head>
+
+<body>
+
+  <div id="navbar"></div>
+  <script>
+    fetch('/misc/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        const navbarContainer = document.getElementById('navbar');
+        navbarContainer.innerHTML = data;
+        const scriptElement = document.createElement('script');
+        scriptElement.textContent = ``;
+        navbarContainer.appendChild(scriptElement);
+        const navbarTitle = document.getElementById('navbar-title');
+        const desiredTitle = "sushiwt/extras";
+        navbarTitle.textContent = desiredTitle;
+      });    
+  </script>
+
+  <div align="center">
+    <br>
+    <div class="black rect shadow" style="width:640px">
+      <p class="large">-- the /extras --</p>
+      <p>
+        this is where my art, animations, and basically just random <br>stuff that i have created, are located.
+      </p>
+    </div>
+  </div>
+
+  <br>
+  <div id="footer"></div>
+  <script>
+    fetch('/misc/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        const footerContainer = document.getElementById('footer');
+        footerContainer.innerHTML = data;
+      });    
+  </script>
+  <br>
+
+</body>
+
+</html>
