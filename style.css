@@ -121,4 +121,13 @@
     padding: 0;
   }
   
+  /* dialogue!!!! */
+  
+  #blob3textbox {
+    visibility: collapse;
+  }
+
+
+  #blob3:hover + #blob3textbox {
+    visibility: visible;
   }
