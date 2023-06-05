@@ -108,3 +108,13 @@
   .big-padding {
     padding: 16px 20px 16px 20px;
   }
+
+  .bar-padding {
+    padding: 8px 10px 8px 10px;
+  }
+
+  .no-padding {
+    padding: 0;
+  }
+  
+  }
