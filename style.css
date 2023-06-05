@@ -70,6 +70,10 @@
     width:100px;
   }
   
+  .button {
+    padding: 8px 10px 8px 10px;
+  }
+  
   .button:hover {
     transition: background-color 0.25s linear, border-color 0.25s linear, transform 0.25s ease-out;
     color: var(--white);
