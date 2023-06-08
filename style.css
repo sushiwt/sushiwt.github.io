@@ -122,6 +122,10 @@
     padding: 0;
   }
   
+  .bradius {
+    border-radius: var(--radius);
+  }
+
   /* dialogue!!!! */
   
   #blob3textbox {
