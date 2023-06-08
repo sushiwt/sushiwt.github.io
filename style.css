@@ -87,14 +87,6 @@
     color: var(--white);
   }
   
-  .flex {
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    margin-left:75px;
-    margin-right:75px;
-  }
-  
   .large {
     font-size:25px;
   }
@@ -146,4 +138,67 @@
   .extend:hover {
     transform:translateX(340px);
     transition: transform 0.25s ease-out;
+  }
+
+  /* wrappers!!! */
+
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-left:75px;
+    margin-right:75px;
+  }
+
+  .navbar-container {
+    background-color:var(--white); 
+    color: var(--black); 
+    box-shadow: 0 0 10px 0 #9c9c9c;
+    padding:12px;
+  }
+
+  .title-wrapper {
+    background-color: var(--black);
+    color: var(--white);
+    border-radius:30px; 
+    margin:0; 
+    min-width:250px; 
+    padding: 25px 10px 25px 10px;
+  }
+
+  .button-wrapper > a {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: var(--radius);
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+    padding: 8px 10px 8px 10px;
+    text-align:center;
+    min-width:60px;
+    box-shadow: 0 0 10px 0 #9c9c9c;
+  }
+
+  .button-motion:hover {
+    transition: background-color 0.25s linear, border-color 0.25s linear, transform 0.25s ease-out;
+    color: var(--white);
+    background-color: var(--black);
+    border-color: var(--black);
+    transform: translate(0px, -5px)
+  }
+
+  .github-button-wrapper {
+    background-color: var(--black);
+    border-radius: var(--radius);
+    border-style: solid;
+    padding:10px 5px 10px 5px;
+    min-width:60px;
+    box-shadow: 0 0 10px 0 #9c9c9c;
+    display: flex; 
+    justify-content: center;
+  }
+
+  .github-button-wrapper:hover {
+    transition: transform 0.25s ease-out;
+    transform: translate(0px, -5px)
   }
