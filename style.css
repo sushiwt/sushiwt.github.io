@@ -136,3 +136,14 @@
   #blob3:hover + #blob3textbox {
     visibility: visible;
   }
+
+  /* other misc classes */
+
+  .extend {
+    transform:translateX(195px);
+  }
+
+  .extend:hover {
+    transform:translateX(340px);
+    transition: transform 0.25s ease-out;
+  }
