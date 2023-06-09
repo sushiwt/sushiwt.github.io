@@ -1,0 +1,46 @@
+.big-slooshi {
+    width: 185px; 
+    transform: translate(-425px); 
+    position:absolute; 
+    z-index: 1;
+}
+
+.blob-image {
+    position:absolute; 
+    transform: translate(400px, 560px); 
+    z-index: 1;
+    width: 50px;
+}
+
+.intro-box-wrapper {
+    width:640px;
+    background-color: var(--black);
+    border-radius: var(--radius);
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+    padding: 35px 10px 35px 10px;
+    box-shadow: 0 0 10px 0 #9c9c9c;
+}
+
+.twr-image {
+    width:550px; 
+    transform:translateY(32px)
+}
+
+.bottom-perspective {
+    perspective: 1000px;
+}
+
+.bottom-info-box {
+    width:900px;
+    margin-top: -67px;
+    transform: rotate3d(1, 0, 0, 45deg);
+    background-color: var(--black);
+    border-radius: var(--radius);
+    border-style: solid;
+    border-color: white;
+    padding: 30px 10px 20px 10px;
+    box-shadow: 0 0 10px 0 #9c9c9c;
+    perspective: 1000px;
+}

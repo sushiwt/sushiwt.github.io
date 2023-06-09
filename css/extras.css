@@ -1,0 +1,15 @@
+.extras-intro-wrapper {
+    width:500px;
+    background-color: var(--black);
+    border-radius: var(--radius);
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+    padding: 35px 10px 35px 10px;
+    box-shadow: 0 0 10px 0 #9c9c9c;
+    z-index: 1;
+}
+
+.three-d-container {
+    
+}
