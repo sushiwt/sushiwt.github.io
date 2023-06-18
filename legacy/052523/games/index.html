@@ -5,16 +5,16 @@
   <title>sushiwt/games</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-  <link href="/css/games.css" rel="stylesheet" type="text/css" media="all">
-  <link rel="icon" type="image/x-icon" href="/images/favicon/games.ico">
+  <link href="../style.css" rel="stylesheet" type="text/css" media="all">
+  <link href="../css/games.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="icon" type="image/x-icon" href="../images/favicon/games.ico">
 </head>
 
 <body>
 
   <div id="navbar"></div>
   <script>
-    fetch('/misc/navbar.html')
+    fetch('../misc/navbar.html')
       .then(response => response.text())
       .then(data => {
         const navbarContainer = document.getElementById('navbar');
@@ -68,26 +68,26 @@
       <br>
       <div class="d-games-button-container flex">
         <div class="d-games-button-motion">
-          <a href="/games/hoverchase/">
-            <img src="/images/games/hoverchase.png" class="shadow image">
+          <a href="../games/hoverchase/">
+            <img src="../images/games/hoverchase.png" class="shadow image">
             <p class="no-margin" style="font-size: 21px;">- HoverChase -</p>
           </a>
         </div>
         <div class="d-games-button-motion">
-          <a href="/games/katanarey/">
-            <img src="/images/games/katanarey.png" class="shadow image">
+          <a href="../games/katanarey/">
+            <img src="../images/games/katanarey.png" class="shadow image">
             <p class="no-margin" style="font-size: 21px;">- KatanaRey -</p>
           </a>
         </div>
         <div class="d-games-button-motion">
-          <a href="/games/extremelylongpong/">
-            <img src="/images/games/extremelylongpong.png" class="shadow image">
+          <a href="../games/extremelylongpong/">
+            <img src="../images/games/extremelylongpong.png" class="shadow image">
             <p class="no-margin" style="font-size: 21px;">- ExtremelyLongPong -</p>
           </a>
         </div>
         <div class="d-games-button-motion">
-          <a href="/games/crowded/">
-            <img src="/images/games/crowdedsheep.png" class="shadow image">
+          <a href="../games/crowded/">
+            <img src="../images/games/crowdedsheep.png" class="shadow image">
             <p class="no-margin" style="font-size: 21px;">- CrowdedSheep -</p>
           </a>
         </div>
@@ -133,7 +133,7 @@
 
   <div id="footer"></div>
   <script>
-    fetch('/misc/footer.html')
+    fetch('../misc/footer.html')
       .then(response => response.text())
       .then(data => {
         const footerContainer = document.getElementById('footer');

@@ -1,81 +1,11 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>sushiwt/index</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-  <link href="/css/index.css" rel="stylesheet" type="text/css" media="all">
-  <link rel="icon" type="image/x-icon" href="/images/favicon/index.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sushiwt/index</title>
 </head>
-
 <body>
 
-  <div id="navbar"></div>
-  <script>
-    fetch('/misc/navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        const navbarContainer = document.getElementById('navbar');
-        navbarContainer.innerHTML = data;
-        const scriptElement = document.createElement('script');
-        scriptElement.textContent = ``;
-        navbarContainer.appendChild(scriptElement);
-        const navbarTitle = document.getElementById('navbar-title');
-        const desiredTitle = "sushiwt/index";
-        navbarTitle.textContent = desiredTitle;
-      });    
-  </script>
-  
-  <div align="center">
-
-    <img class="big-slooshi" src="/images/big-slooshi.png">
-
-    <div id="blob3">
-      <img class="blob-image" src="/images/blob.png">
-    </div>
-
-    <br>
-    <div class="intro-box-wrapper">
-      <p class="large">welcome to my (black and white) lair...</p>
-      <br>
-      <p>
-        i'm sushiwt, aka sushi, and welcome to my website!
-        <br>
-        <br>
-        here, you can find stuff about /myself, play /games that i <br>
-        have created, and read stuff that i post on my /blog!
-        <br>
-        <br>
-      <p class="large">i hope you enjoy your stay here :D</p>
-      <br>
-      (btw, the gal on the left is my online persona, slooshi)
-      </p>
-      </p>
-      <img class="twr-image" src="/images/twr.png">
-    </div>
-    <div class="bottom-perspective">
-      <div class="bottom-info-box">
-        <p class="large">
-          if you want to explore, feel free to use the navigation buttons! <br>
-          they can get you to the 4 /sections....
-        </p>
-        <br>
-      </div>
-    </div>
-  </div>
-  <br>
-  <div id="footer"></div>
-  <script>
-    fetch('/misc/footer.html')
-      .then(response => response.text())
-      .then(data => {
-        const footerContainer = document.getElementById('footer');
-        footerContainer.innerHTML = data;
-      });    
-  </script>
-  <br>
 </body>
-
 </html>

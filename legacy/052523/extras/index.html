@@ -5,16 +5,16 @@
   <title>sushiwt/extras</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-  <link href="/css/extras.css" rel="stylesheet" type="text/css" media="all">
-  <link rel="icon" type="image/x-icon" href="/images/favicon/extras.ico">
+  <link href="../style.css" rel="stylesheet" type="text/css" media="all">
+  <link href="../css/extras.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="icon" type="image/x-icon" href="../images/favicon/extras.ico">
 </head>
  
 <body>
 
   <div id="navbar"></div>
   <script>
-    fetch('/misc/navbar.html')
+    fetch('../misc/navbar.html')
       .then(response => response.text())
       .then(data => {
         const navbarContainer = document.getElementById('navbar');
@@ -59,7 +59,7 @@
   <br>
   <div id="footer"></div>
   <script>
-    fetch('/misc/footer.html')
+    fetch('../misc/footer.html')
       .then(response => response.text())
       .then(data => {
         const footerContainer = document.getElementById('footer');

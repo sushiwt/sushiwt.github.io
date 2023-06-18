@@ -11,7 +11,7 @@ body {
   font-family: minitext;
   transition: filter 0.5s ease-in-out;
   animation: scroll 120s linear infinite;
-  background-image: url("/images/stars.png");
+  background-image: url("images/stars.png");
   background-repeat: repeat;
   background-position: 0 0;
   font-size:18px;
@@ -19,7 +19,7 @@ body {
 
 @font-face {
   font-family: 'minitext';
-  src: url(/minitext-font/minitext-webfont.woff);
+  src: url(minitext-font/minitext-webfont.woff);
   }
 
 @keyframes scroll {
