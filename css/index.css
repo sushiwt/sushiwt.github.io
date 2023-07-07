@@ -29,6 +29,12 @@ body {
 
 p {
     margin:0;
+    font-size:24px;
+}
+
+h1 {
+  margin:0;
+  font-weight:normal;
 }
 
 .menu {
@@ -47,6 +53,18 @@ p {
     backdrop-filter: blur(4px);
 }
 
+.div1 {
+  padding: 25px;
+  text-align:center;
+}
+
+.indextitle {
+  background-color: white;
+  color:black;
+  border-radius: 25px;
+  padding:10px
+}
+
 .parent {
     height:500px;
     width:1000px;
@@ -60,10 +78,10 @@ p {
     grid-row-gap: 10px;
     }
     
-    .div1 { grid-area: 1 / 1 / 3 / 3; }
-    .tile1 { grid-area: 1 / 3 / 2 / 4; }
+    .div1 { grid-area: 1 / 2 / 3 / 4; }
+    .tile1 { grid-area: 1 / 1 / 2 / 2; }
     .tile2 { grid-area: 1 / 4 / 2 / 5; }
-    .tile3 { grid-area: 2 / 3 / 3 / 4; }
+    .tile3 { grid-area: 2 / 1 / 3 / 2; }
     .tile4 { grid-area: 2 / 4 / 3 / 5; }
 
 .parent > div {
@@ -78,7 +96,6 @@ p {
   }
   
   .tile1 > p {
-    font-size:24px;
     padding:10px;
     position: absolute;
     bottom: 0;
@@ -90,7 +107,6 @@ p {
   }
   
   .tile2 > p {
-    font-size:24px;
     padding:10px;
     position: absolute;
     bottom: 0;
@@ -102,7 +118,6 @@ p {
   }
   
   .tile3 > p {
-    font-size:24px;
     padding:10px;
     position: absolute;
     bottom: 0;
@@ -114,7 +129,6 @@ p {
   }
   
   .tile4 > p {
-    font-size:24px;
     padding:10px;
     position: absolute;
     bottom: 0;
