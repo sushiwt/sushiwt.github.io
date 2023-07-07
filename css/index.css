@@ -1,0 +1,122 @@
+@media only screen and (max-width: 1035px) {
+    .parent {
+        height:800px;
+        width:400px;
+    }
+}
+
+body {
+    margin:0px;
+    background-color: black;
+    border-color: white;
+    color:white;
+    font-family:'minitext';
+    background-image: url("/img/stars.svg");
+    background-repeat: repeat;
+    background-position: 0 0;
+    animation: scroll 120s linear infinite;
+}
+
+@font-face {
+    font-family: 'minitext';
+    src: url(/minitext-font/minitext-webfont.woff);
+}
+
+@keyframes scroll {
+    0% { background-position: 0 0; }
+    100% { background-position: -2000px 0; }
+}
+
+p {
+    margin:0;
+}
+
+.menu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    display:flex; 
+    width:fit-content;
+    float:left;
+    background-color: rgba(0,0,0,0);
+    backdrop-filter: blur(4px);
+}
+
+.parent {
+    height:500px;
+    width:1000px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 3 / 3; }
+    .tile1 { grid-area: 1 / 3 / 2 / 4; }
+    .tile2 { grid-area: 1 / 4 / 2 / 5; }
+    .tile3 { grid-area: 2 / 3 / 3 / 4; }
+    .tile4 { grid-area: 2 / 4 / 3 / 5; }
+
+.parent > div {
+    border-style: solid;
+    border-width: 5px;
+    border-radius:15px;
+    background-color:rgba(0,0,0);
+}
+
+.tile1 {
+    position: relative;
+  }
+  
+  .tile1 > p {
+    font-size:24px;
+    padding:10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+.tile2 {
+    position: relative;
+  }
+  
+  .tile2 > p {
+    font-size:24px;
+    padding:10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+.tile3 {
+    position: relative;
+  }
+  
+  .tile3 > p {
+    font-size:24px;
+    padding:10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+.tile4 {
+    position: relative;
+  }
+  
+  .tile4 > p {
+    font-size:24px;
+    padding:10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
