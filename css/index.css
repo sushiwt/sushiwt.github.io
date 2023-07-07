@@ -120,3 +120,7 @@ p {
     bottom: 0;
     left: 0;
   }
+
+.parent > div.tile1 {
+  cursor:pointer;
+}
