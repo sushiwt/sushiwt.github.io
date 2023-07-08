@@ -131,3 +131,15 @@ h1 {
 .parent > div.tile1 {
   cursor:pointer;
 }
+
+.parent > div.tile2 {
+  cursor:pointer;
+}
+
+.parent > div.tile3 {
+  cursor:pointer;
+}
+
+.parent > div.tile4 {
+  cursor:pointer;
+}
