@@ -58,13 +58,6 @@ h1 {
   text-align:center;
 }
 
-.indextitle {
-  background-color: white;
-  color:black;
-  border-radius: 25px;
-  padding:10px
-}
-
 .parent {
     height:500px;
     width:1000px;
