@@ -31,18 +31,46 @@
         <div class="parent">
             <div class="div1">
             </div>
-            <div class="tile1">
+            <div class="tile1" id="gameslink" title="https://sushiwt.github.io/games">
                 <p>/games</p>
             </div>
-            <div class="tile2">
+            <div class="tile2" id="myselflink" title="https://sushiwt.github.io/myself">
                 <p>/myself</p>
             </div>
-            <div class="tile3">
+            <div class="tile3" id="bloglink" title="https://sushiwt.github.io/blog">
                 <p>/blog</p>
             </div>
-            <div class="tile4">
+            <div class="tile4" id="extraslink" title="https://sushiwt.github.io/extras">
                 <p>/extras</p>
             </div>
+
+            <script>
+                var myDiv = document.getElementById("gameslink");
+        
+                myDiv.addEventListener("click", function() {
+                    window.location.href = "https://example.com";
+                });
+
+                var myDiv = document.getElementById("myselflink");
+        
+                myDiv.addEventListener("click", function() {
+                    window.location.href = "https://example.com";
+                });
+
+                var myDiv = document.getElementById("bloglink");
+                
+                myDiv.addEventListener("click", function() {
+                    window.location.href = "https://example.com";
+                });
+
+                var myDiv = document.getElementById("extraslink");
+                
+                myDiv.addEventListener("click", function() {
+                    window.location.href = "https://example.com";
+                });
+
+        
+            </script>
         </div> 
     </div>
 </body>
