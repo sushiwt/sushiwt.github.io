@@ -45,29 +45,27 @@
             </div>
 
             <script>
-                var myDiv = document.getElementById("gameslink");
+                var gamesdiv = document.getElementById("gameslink");
+                var myselfdiv = document.getElementById("myselflink");
+                var blogdiv = document.getElementById("bloglink");
+                var extrasdiv = document.getElementById("extraslink");
+
+                gamesdiv.addEventListener("click", function() {
+                    window.location.href = "https://sushiwt.itch.io";
+                });
         
-                myDiv.addEventListener("click", function() {
-                    window.location.href = "https://example.com";
+                myselfdiv.addEventListener("click", function() {
+                    window.location.href = "https://youtube.com/@sushiwth";
                 });
-
-                var myDiv = document.getElementById("myselflink");
-        
-                myDiv.addEventListener("click", function() {
-                    window.location.href = "https://example.com";
-                });
-
-                var myDiv = document.getElementById("bloglink");
                 
-                myDiv.addEventListener("click", function() {
-                    window.location.href = "https://example.com";
+                blogdiv.addEventListener("click", function() {
+                    window.location.href = "https://sushiwt.tumblr.com";
+                });
+                
+                extrasdiv.addEventListener("click", function() {
+                    window.location.href = "https://sc36.net";
                 });
 
-                var myDiv = document.getElementById("extraslink");
-                
-                myDiv.addEventListener("click", function() {
-                    window.location.href = "https://example.com";
-                });
 
         
             </script>
