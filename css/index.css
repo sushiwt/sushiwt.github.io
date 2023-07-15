@@ -154,6 +154,8 @@ h1 {
 
 .tile1 {
     position: relative;
+    background-image: url("/img/dummybtn/1.png");
+    background-size: 100%;
   }
   
   .tile1 > p {
@@ -165,6 +167,8 @@ h1 {
 
 .tile2 {
     position: relative;
+    background-image: url("/img/dummybtn/2.png");
+    background-size: 100%;
   }
   
   .tile2 > p {
@@ -176,6 +180,8 @@ h1 {
 
 .tile3 {
     position: relative;
+    background-image: url("/img/dummybtn/3.png");
+    background-size: 100%;
   }
   
   .tile3 > p {
@@ -187,6 +193,8 @@ h1 {
 
 .tile4 {
     position: relative;
+    background-image: url("/img/dummybtn/4.png");
+    background-size: 100%;
   }
   
   .tile4 > p {
