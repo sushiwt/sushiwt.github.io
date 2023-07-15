@@ -133,11 +133,17 @@ h1 {
 }
 
 .div1 {
-  padding: 25px;
+  position:relative;
   text-align:center;
+  background-image: url(/img/dummybtn/tv.png);
+  background-size: 100%;
 }
 
-
+.div1 > marquee {
+    position: absolute;
+    bottom: 10px;
+    left:0;
+}
 
 .parent > div {
     border-style: solid;
