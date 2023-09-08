@@ -60,7 +60,7 @@
   .tile4 { grid-area: 2 / 4 / 3 / 5; }
 }
 
-@media only screen and (min-width: 1036px) {
+@media only screen and (min-width: 1036px) and (min-height:630px){
   .parent {
     height: 500px;
     width: 1000px;
@@ -78,6 +78,23 @@
   .tile4 { grid-area: 2 / 4 / 3 / 5; }
 }
 
+@media only screen and (max-height:630px) and (min-width: 842px){
+  .parent {
+    height: 400px;
+    width: 800px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .div1 { grid-area: 1 / 2 / 3 / 4; }
+  .tile1 { grid-area: 1 / 1 / 2 / 2; }
+  .tile2 { grid-area: 1 / 4 / 2 / 5; }
+  .tile3 { grid-area: 2 / 1 / 3 / 2; }
+  .tile4 { grid-area: 2 / 4 / 3 / 5; }
+}
 
 body {
     margin:0px;
