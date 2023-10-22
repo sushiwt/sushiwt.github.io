@@ -6,17 +6,23 @@
     <title>sushiwt/index</title>
     <style>
         body {
-            font-family: Tahoma;
-            font-weight: bold;
-            background-image: 
-                radial-gradient(rgb(234, 234, 234) 30%, transparent 30%),
-                radial-gradient(rgb(234, 234, 234) 30%, transparent 30%);
-            background-position: 0px 0px, 104px 104px;
-            background-size: 208px 208px;
-            background-color: rgb(254, 255, 255);
-            margin: 0;
-        }
+        font-family: Tahoma;
+        font-weight: bold;
+        background-image: 
+            radial-gradient(rgb(234, 234, 234) 30%, transparent 30%),
+            radial-gradient(rgb(234, 234, 234) 30%, transparent 30%);
+        background-position: 0px 0px, 104px 104px;
+        background-size: 208px 208px;
+        background-color: rgb(254, 255, 255);
+        margin: 0;
+        animation: scrollBackground 10s linear infinite;
+    }
 
+    @keyframes scrollBackground {
+        100% {
+            background-position: 104px 104px, 208px 208px;;
+        }
+    }
         .message {
             border: 5px solid;
             position: absolute;
