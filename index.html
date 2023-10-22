@@ -6,7 +6,36 @@
     <title>sushiwt/index</title>
     <style>
         body {
-            text-align: center;
+            font-family: Tahoma;
+            font-weight: bold;
+            background-image: 
+                radial-gradient(rgb(234, 234, 234) 30%, transparent 30%),
+                radial-gradient(rgb(234, 234, 234) 30%, transparent 30%);
+            background-position: 0px 0px, 104px 104px;
+            background-size: 208px 208px;
+            background-color: rgb(254, 255, 255);
+            margin: 0;
+        }
+
+        .message {
+            border: 5px solid;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            border-style: solid; 
+            border-width: 6px;
+            border-radius: 20px;
+            border-color: #AAE5A4;
+            background-color: white;
+            box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.50);
+            width:fit-content; 
+            height:fit-content; 
+            padding-left: 75px; 
+            padding-right: 75px; 
+            padding-top: 50px; 
+            padding-bottom: 50px;
         }
 
         a {
@@ -15,11 +44,9 @@
     </style>
 </head>
 <body>
-    <hr>
-    <h1>hello, recreating the site atm</h1>
-    <hr>
-    <p>click this link if you want to access the legacy versions :D</p>
-    <a href="/legacy/" title="rawr">https://sushiwt.github.io/legacy</a>
-    <hr>
+    <div class="message">
+        <h1 style="color:#65995F;  ">hello! this website is still a WIP.</h1>
+        <p style="color: #565656;">you can check out the older versions in <a style="color:#65995F" href="/legacy/">/legacy</a> if you want!</p>
+    </div>
 </body>
 </html>
