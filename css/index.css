@@ -11,7 +11,7 @@
     --svg-dark-mode: invert(100%) sepia(99%) saturate(2%) hue-rotate(216deg) brightness(105%) contrast(100%);
 }
 
-:root {
+.root {
     --main: #000;
     --dark: #dadada;
     --light: #111111;
