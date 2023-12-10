@@ -24,7 +24,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Tahoma, sans-serif;
     font-weight: bold;
     background-image: 
         radial-gradient(var(--light) 30%, transparent 30%),
