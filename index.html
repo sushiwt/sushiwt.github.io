@@ -41,6 +41,10 @@
             align-items: center;
         }
 
+        .inv-title {
+            filter: brightness(3)
+        }
+
         .buttons {
             display: flex;
             justify-content: right;
@@ -67,7 +71,7 @@
         }
 
         .qna {
-            margin: 0 0 0 20px;
+            margin: 0 0 0 28px;
             background-color: var(--dark);
             padding: 2px 5px;
             width: 50px;
@@ -76,12 +80,17 @@
             border-radius: 30px;
             box-shadow: 0px 2px 0px rgba(4, 83, 0, 0.205);
             display: flex;
-            justify-content: right;
+            justify-content: left;
             align-items: center;
         }
 
+        .qna-on {
+            justify-content: right;
+        }
+
+
         .dm-switch {
-            background-color: white;
+            background-color: var(--main);
             width:24px;
             height:24px;
             border-radius: 30px;
@@ -100,7 +109,7 @@
 <body>
     <div class="navbar">
         <div class="title">
-            <img src="/img/ezgif.com-crop.gif" height="55px">
+            <img src="/img/ezgif.com-crop.gif" height="55px" id="title-img">
             <h1></h1>
         </div>
         <div class="buttons">
@@ -110,11 +119,74 @@
                 <img src="/img/btnicons/gamepad-minimalistic-svgrepo-com.svg">
                 <img src="/img/btnicons/user-circle-svgrepo-com.svg">
             </div>
-            <div class="qna">
+            <div id="switch" class="qna">
                 <div class="dm-switch">
                     <img src="/img/btnicons/moon-svgrepo-com.svg">
                 </div>
             </div>
+            <script>
+                const button = document.getElementById('switch');
+                const titleImage = document.getElementById('title-img');
+                const root = document.querySelector(':root');
+                const queryString = window.location.search;
+                var checkbtn = 1
+
+                function addParameter(key, value) {
+                    let url = new URL(window.location.href);
+                    url.searchParams.set(key, value);
+                    window.history.replaceState({}, '', url.href);
+                }
+                function resetParameters() {
+                    let url = new URL(window.location.href);
+                    url.search = '';
+                    window.history.replaceState({}, '', url.href);
+                }
+
+                if (queryString == '?dark=true') {
+                    checkbtn = 0
+                } else {
+                    resetParameters()
+                }
+
+
+                rawr()
+                console.log(queryString);
+                
+
+                function rawr() {
+                    if (checkbtn == 0) {
+                        button.className = 'qna qna-on'
+                        titleImage.className = 'inv-title'
+                        addParameter('dark',true);
+                        checkbtn = 1
+                        root.style.setProperty('--main', '#000');
+                        root.style.setProperty('--dark', '#dadada');
+                        root.style.setProperty('--light', '#111111');
+                        root.style.setProperty('--normal', '#808080');
+                        root.style.setProperty('--alt-dark', '#99507F');
+                        root.style.setProperty('--alt-light', '#E6A5CF');
+                        root.style.setProperty('--translucent-main', 'rgba(0, 0, 0, 0.50)');
+                        root.style.setProperty('--svg-color', 'invert(100%) sepia(99%) saturate(2%) hue-rotate(216deg) brightness(105%) contrast(100%)');
+                    } else if (checkbtn == 1) {
+                        button.className = 'qna'
+                        titleImage.className = ''
+                        resetParameters()
+                        checkbtn = 0
+                        root.style.setProperty('--main', '#fff');
+                        root.style.setProperty('--dark', '#65995F');
+                        root.style.setProperty('--light', '#D6FFD1');
+                        root.style.setProperty('--normal', '#AAE5A4');
+                        root.style.setProperty('--alt-dark', '#99507F');
+                        root.style.setProperty('--alt-light', '#E6A5CF');
+                        root.style.setProperty('--translucent-main', 'rgba(255,255,255,0.50)');
+                        root.style.setProperty('--svg-color', 'invert(56%) sepia(28%) saturate(572%) hue-rotate(67deg) brightness(93%) contrast(86%) drop-shadow(0px 2px 0px rgba(4, 83, 0, 0.205))');
+                    }
+                }
+
+                button.addEventListener('click', function handleClick() {
+                    rawr()
+                });
+            </script>
         </div>
     </div>
 </body>
