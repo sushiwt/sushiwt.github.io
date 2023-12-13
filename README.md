@@ -1,10 +1,10 @@
-# sushiwt.github.io
-hello! this is the repository of my website, sushiwt/site, hosted on github pages! 
+# whytee.xyz
+hello! this is the repository of my website, https://whytee.xyz, hosted on github pages! 
 
 ## the website includes:
 
 - /index: the home page
-- /blog: where my tumblr page is
+- /blog: where i ramble about my site or my thoughts
 - /myself: everything there is to know about me!
 - /games: all the games i created
 - /extras: art, animations, and others
