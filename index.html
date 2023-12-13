@@ -16,94 +16,6 @@
 
     <title>sushiwt's home</title>
     <style>
-        .navbar {
-            background-color: var(--translucent-main);
-            box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
-            border-bottom: 2px solid var(--light);
-            backdrop-filter: blur(20px);
-            width:100%;
-            position:absolute;
-            padding:10px 0;
-        }
-
-        p {
-            margin:0
-        }
-
-        .navbar {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        } 
-
-        .title {
-            padding: 0 32px;
-            display: flex;
-            align-items: center;
-        }
-
-        .inv-title {
-            filter: brightness(3)
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: right;
-            align-items: center;
-            padding: 0 32px;
-        }
-
-        .buttonset {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-column-gap: 24px;
-        }
-        
-        .buttonset img {
-            width: 28px;
-            filter: var(--svg-color);
-        }
-
-        h1 {
-            color:var(--dark);
-            margin:0;
-            font-size:28px;
-            text-shadow: 0px 2px 0px rgba(4, 83, 0, 0.205)
-        }
-
-        .qna {
-            margin: 0 0 0 28px;
-            background-color: var(--dark);
-            padding: 2px 5px;
-            width: 50px;
-            height: 30px;
-            color: var(--main);
-            border-radius: 30px;
-            box-shadow: 0px 2px 0px rgba(4, 83, 0, 0.205);
-            display: flex;
-            justify-content: left;
-            align-items: center;
-        }
-
-        .qna-on {
-            justify-content: right;
-        }
-
-
-        .dm-switch {
-            background-color: var(--main);
-            width:24px;
-            height:24px;
-            border-radius: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-        }
-
-        .dm-switch img {
-            width:18px;
-            filter: var(--svg-color)
-        }
     </style>
 </head>
 <body>
@@ -148,10 +60,8 @@
                     resetParameters()
                 }
 
-
                 rawr()
                 console.log(queryString);
-                
 
                 function rawr() {
                     if (checkbtn == 0) {
@@ -160,6 +70,7 @@
                         addParameter('dark',true);
                         checkbtn = 1
                         root.style.setProperty('--main', '#000');
+                        root.style.setProperty('--main-inv', '#fff');
                         root.style.setProperty('--dark', '#dadada');
                         root.style.setProperty('--light', '#111111');
                         root.style.setProperty('--normal', '#808080');
@@ -173,6 +84,7 @@
                         resetParameters()
                         checkbtn = 0
                         root.style.setProperty('--main', '#fff');
+                        root.style.setProperty('--main-inv', '#565656');
                         root.style.setProperty('--dark', '#65995F');
                         root.style.setProperty('--light', '#D6FFD1');
                         root.style.setProperty('--normal', '#AAE5A4');
@@ -188,6 +100,29 @@
                 });
             </script>
         </div>
+    </div>
+
+    <div style="
+        font-family:tahoma, sans-serif;
+        position:fixed;
+        bottom:0;
+        border-style:solid;
+        padding:10px 20px;
+        margin:10px;
+        border-radius: 10px;
+        background-color: var(--translucent-main);
+        border-color: var(--light);
+        backdrop-filter:blur(20px);
+        box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+        font-size: 12px;
+        ">
+        <h1 style="margin:10px;">
+          This website is still under construction :3
+        </h1>
+        <p style="margin:10px; color:var(--main-inv)">
+          To visit the legacy sites, go to <a href="https://whytee.xyz/legacy">
+            https://whytee.xyz/legacy</a>, as the website you are looking at is not finished.
+        </p> 
     </div>
 </body>
 </html>
