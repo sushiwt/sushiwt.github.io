@@ -102,7 +102,7 @@ body {
     border-color: white;
     color:white;
     font-family:'minitext';
-    background-image: url("/img/stars.svg");
+    background-image: url("/legacy/230707/img/stars.png");
     background-repeat: repeat;
     background-position: 0 0;
     animation: scroll 120s linear infinite;
@@ -110,7 +110,7 @@ body {
 
 @font-face {
     font-family: 'minitext';
-    src: url(/minitext-font/minitext-webfont.woff);
+    src: url(/legacy/minitext-font/minitext-webfont.woff);
 }
 
 @keyframes scroll {
@@ -152,7 +152,7 @@ h1 {
 .div1 {
   position:relative;
   text-align:center;
-  background-image: url(/img/dummybtn/anim/tv/tvdefault.gif);
+  background-image: url(img/dummybtn/anim/tv/tvdefault.gif);
   background-size: 100%;
 }
 
