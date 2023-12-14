@@ -1,11 +1,18 @@
 body {
   background-color: #000000;
-  background-image: url("/images/stars.png");
+  background-image: url("/legacy/230404/images/stars.png");
   background-repeat: repeat;
   color: white;
   font-family: "minitext";
   margin:0px;
 }
+
+
+@font-face {
+  font-family: 'minitext';
+  src: url(/legacy/minitext-font/minitext-webfont.woff);
+}
+
 
 a {
   text-decoration:none;
@@ -24,6 +31,8 @@ a {
     border-color: #FFF;
     margin:auto;
     height:450px;
+    clear: both;
+    display: table;
 }
 
 hr {
