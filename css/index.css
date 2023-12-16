@@ -108,3 +108,11 @@ h1 {
     width:18px;
     filter: var(--svg-color)
 }
+
+.disclaimer {
+    filter: opacity(50%);
+}
+
+.disclaimer:hover {
+    filter: opacity(100%);
+}
