@@ -21,18 +21,26 @@ a {
     color:var(--dark);
 }
 
+p {
+    margin:0
+}
+
+h1 {
+    color:var(--dark);
+    margin:0;
+    font-size:28px;
+    text-shadow: 0px 2px 0px rgba(4, 83, 0, 0.205)
+}
+
+/* the classes from navbar to .dm-switch are all for the navigation bar :skull: */
 .navbar {
     background-color: var(--translucent-main);
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
     border-bottom: 2px solid var(--light);
     backdrop-filter: blur(20px);
     width:100%;
-    position:absolute;
     padding:10px 0;
-}
-
-p {
-    margin:0
+    margin-bottom: 50px;
 }
 
 .navbar {
@@ -66,13 +74,6 @@ p {
 .buttonset img {
     width: 28px;
     filter: var(--svg-color);
-}
-
-h1 {
-    color:var(--dark);
-    margin:0;
-    font-size:28px;
-    text-shadow: 0px 2px 0px rgba(4, 83, 0, 0.205)
 }
 
 .qna {
@@ -109,10 +110,40 @@ h1 {
     filter: var(--svg-color)
 }
 
+/*  the disclaimer classes are for the little message in the 
+    bottom left corner of the screen lol    */
+
+
 .disclaimer {
     filter: opacity(50%);
+    user-select: none;
+    transform: translateY(95px);
+    transition: filter 0.3s, transform 0.2s;
+}
+
+.disclaimer h1 {
+    transition: margin 0.2s;
+    margin: 10px 10px 20px 10px;
 }
 
 .disclaimer:hover {
+    transition: filter 0.2s, transform 0.2s;
+    transform: translateY(0);
     filter: opacity(100%);
+}
+
+.disclaimer:hover h1 {
+    transition: margin 0.2s;
+    margin: 10px 10px 15px 10px;
+}
+
+/* this one is for the actual website */
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.mainmenu {
+    width:940px;
 }
