@@ -11,6 +11,7 @@ body {
     background-color: var(--main);
 }
 
+
 @keyframes scrollBackground {
     100% {
         background-position: 104px 104px, 208px 208px;
@@ -168,9 +169,6 @@ h1 {
 
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px; 
 }
 
 
@@ -183,6 +181,7 @@ h1 {
     border-radius: 10px;
     overflow: hidden;
     height:380px;
+    backdrop-filter:blur(20px);
 }
 
 .description {
@@ -201,8 +200,7 @@ h1 {
 }
 
 .desc-text {
-    margin-top:10px;
-    margin-right: 10px;
+    margin:12px;
     height: 100%;
 }
 
@@ -230,3 +228,45 @@ h1 {
     color:var(--main);
 }
 
+
+
+/*misc*/
+
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 2%;
+width: auto;
+margin-left: 10px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.25s ease;
+border-radius: 100px;
+user-select: none;
+
+background-color: rgba(0,0,0,0.25);
+}
+
+.next {
+right:0;
+margin-right: 10px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
