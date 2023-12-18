@@ -164,30 +164,15 @@ h1 {
     border-radius: 20px;
     background-color: var(--translucent-main);
     border-color: var(--light);
-    backdrop-filter:blur(20px);
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+    min-width:0;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
-
-
-
-.slideshow {
-    box-shadow:  0px 0px 15px 0px rgba(0,0,0,0.15);
-    border-radius: 10px;
-    height:380px;
-    backdrop-filter:blur(20px);
-    overflow: hidden;
-    margin-right: 10px;
-}
-
-@media only screen and (max-width: 440px) {
-    .slideshow {
-        margin-right: 0px;
-    }
-}
-
 
 .description {
     width: 324px;
@@ -236,6 +221,24 @@ h1 {
 
 /* other styles for the carousel */
 
+.carousel {
+    box-shadow:  0px 0px 15px 0px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    height:380px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 440px) {
+    .carousel {
+        margin-right: 0px;
+    }
+}
+
+.mySlides {
+    padding: 0;
+}
+
 .mySlides img {
     width:100%; 
     height: 326px;
@@ -244,6 +247,7 @@ h1 {
 .fade {
     animation-name: fade;
     animation-duration: 0.5s;
+    margin:0;
   }
   
   @keyframes fade {
@@ -254,21 +258,24 @@ h1 {
 
 .prev, .next {
     cursor: pointer;
-    position: absolute;
     top: 2%;
     width: auto;
     height: 30px;
-    margin-left: 10px;
     padding: 16px;
     transition: 0.25s ease;
     border-radius: 5px;
-    user-select: none;
     background-color: rgba(0,0,0,0.25);
+    transform: translate(0, -350px);
+}
+
+.prev {
+    float: left;
+    margin-left: 10px;
 }
 
 .next {
-    right:0;
     margin-right: 10px;
+    float: right;
 }
 
 .prev:hover, .next:hover {
@@ -289,18 +296,21 @@ background-color: rgba(0,0,0,0.8);
     border-radius: 50%;
     transition: background-color 0.2s ease;
 }
+
+.dot:hover {
+    background-color: var(--main);
+}
   
-.active, .dot:hover {
+.active {
+    transform: translateY(-2px);
     background-color: var(--main);
 }
 
 .image-strip {
-    position:absolute; 
-    bottom:0; 
     background-color: var(--dark);    
     width:100%;
     height:34px;
     padding-top: 20px;
     border-top: solid #3a3a3a3d 2px;
-
+    transform: translateY(-6px);
 }
