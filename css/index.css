@@ -201,7 +201,8 @@ h1 {
 }
 
 .desc-text {
-    margin:12px;
+    padding-top:14px;
+    padding-right:14px;
     height: 100%;
 }
 
