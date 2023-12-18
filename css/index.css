@@ -172,9 +172,6 @@ h1 {
 }
 
 
-.sprt {
-    width: 10px;
-}
 
 .slideshow {
     box-shadow:  0px 0px 15px 0px rgba(0,0,0,0.15);
@@ -182,11 +179,18 @@ h1 {
     height:380px;
     backdrop-filter:blur(20px);
     overflow: hidden;
+    margin-right: 10px;
 }
+
+@media only screen and (max-width: 440px) {
+    .slideshow {
+        margin-right: 0px;
+    }
+}
+
 
 .description {
     width: 324px;
-    margin-left: 10px;
     display: flex;
     flex-direction: column;
 }
