@@ -347,6 +347,7 @@ background-color: rgba(0,0,0,0.8);
     .buttons {
         margin-left: auto;
         margin-right: auto;
+        padding:0;
     }
 
 }
