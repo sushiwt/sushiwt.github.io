@@ -175,6 +175,7 @@ h1 {
 }
 
 .description {
+    position:relative;
     width: 324px;
     display: flex;
     flex-direction: column;
@@ -182,7 +183,7 @@ h1 {
 
 
 .desc-image {
-    max-height: 151px;
+    height: 151px;
     box-shadow:  0px 0px 15px 0px rgba(0,0,0,0.15);
     border-radius: 10px;
     overflow: hidden;
@@ -192,7 +193,11 @@ h1 {
 .desc-text {
     padding-top:10px;
     padding-right:14px;
-    height: 100%;
+}
+
+.social-media-set {
+    position:absolute;
+    bottom:0;
 }
 
 .set-button-social {
