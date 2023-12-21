@@ -234,12 +234,6 @@ h1 {
     overflow: hidden;
 }
 
-@media only screen and (max-width: 440px) {
-    .carousel {
-        margin-right: 0px;
-    }
-}
-
 .mySlides {
     padding: 0;
 }
@@ -318,4 +312,41 @@ background-color: rgba(0,0,0,0.8);
     padding-top: 20px;
     border-top: solid #3a3a3a3d 2px;
     transform: translateY(-6px);
+}
+
+@media only screen and (max-width: 680px) {
+    .disclaimer {
+        display:none;
+    }
+}   
+@media only screen and (max-width: 610px) {
+    .carousel {
+        margin-right: 0px;
+        width:0;
+    }
+    
+    .mainmenu {
+        width:fit-content;
+    }
+
+    .gallery {
+        grid-template-columns: 0fr 1fr;
+        width:fit-content
+    }
+
+    .navbar {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns:1fr;
+    }
+
+    #title-img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
