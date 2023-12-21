@@ -39,7 +39,7 @@ h1 {
 .navbar {
     background-color: var(--translucent-main);
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
-    border-bottom: 2px solid var(--light);
+    border-bottom: 2px solid var(--border);
     backdrop-filter: blur(20px);
     width:100%;
     padding:10px 0;
@@ -66,6 +66,7 @@ h1 {
     justify-content: right;
     align-items: center;
     padding: 0 32px;
+    
 }
 
 .buttonset {
@@ -163,7 +164,8 @@ h1 {
     padding:10px 10px;
     border-radius: 20px;
     background-color: var(--translucent-main);
-    border-color: var(--light);
+    border-color: var(--border);
+    border-width: 2px;
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
     min-width:0;
 
@@ -183,6 +185,8 @@ h1 {
 
 
 .desc-image {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
     height: 151px;
     box-shadow:  0px 0px 15px 0px rgba(0,0,0,0.15);
     border-radius: 10px;
@@ -245,7 +249,7 @@ h1 {
 
 .fade {
     animation-name: fade;
-    animation-duration: 0.5s;
+    animation-duration: 0.25s;
     margin:0;
   }
   
