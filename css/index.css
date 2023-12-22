@@ -1,6 +1,5 @@
 body {
     font-family: 'Ubuntu';
-    font-weight: bold;
     background-image: 
         radial-gradient(var(--light) 30%, transparent 30%),
         radial-gradient(var(--light) 30%, transparent 30%);
@@ -20,20 +19,8 @@ body {
 
 @font-face {
     font-family: 'Ubuntu';
-    src: url('/misc/ubuntu-font/Ubuntu-Regular.woff2') format('woff2'),
-        url('/misc/ubuntu-font/Ubuntu-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Ubuntu';
     src: url('/misc/ubuntu-font/Ubuntu-Bold.woff2') format('woff2'),
         url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
 }
 
 a {
@@ -47,6 +34,7 @@ p {
 }
 
 h1 {
+    font-weight: normal;
     color:var(--dark);
     margin:0;
     font-size:28px;
