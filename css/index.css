@@ -30,7 +30,7 @@ body {
 @font-face {
     font-family: 'Ubuntu';
     src: url('/misc/ubuntu-font/Ubuntu-Bold.woff2') format('woff2'),
-        url('/misc/ubuntu-font/Ubuntu-Regular.woff') format('woff');
+        url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -45,7 +45,7 @@ p {
     margin:0;
     color:var(--main-inv); 
     font-size: 12px;
-    line-height: 1.25;
+    line-height: 15px;
 }
 
 h1 {
