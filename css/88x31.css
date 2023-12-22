@@ -1,4 +1,16 @@
-img {
-    display: block;
-    float:left;
+
+body {
+    background-image: url(/img/misc/37Ow9z.png);
+    background-color: black;
+    color:white;
+    font-family: 'sans-serif';
+}
+
+.images {
+    text-align: center;
+    font-size: 0;
+}
+
+.images a {
+    display: inline;
 }
