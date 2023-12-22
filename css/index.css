@@ -1,5 +1,5 @@
 body {
-    font-family: 'Ubuntu';
+    font-family: 'minitext';
     font-weight: bold;
     background-image: 
         radial-gradient(var(--light) 30%, transparent 30%),
@@ -36,6 +36,14 @@ body {
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'minitext';
+    src: url('/legacy/minitext-font/minitext-webfont.woff2') format('woff2'),
+        url('/legacy/minitext-font/minitext-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 a {
     color:var(--dark);
@@ -45,7 +53,6 @@ p {
     margin:0;
     color:var(--main-inv); 
     font-size: 12px;
-    line-height: 15px;
 }
 
 h1 {
