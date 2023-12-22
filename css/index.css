@@ -1,5 +1,5 @@
 body {
-    font-family: 'minitext';
+    font-family: 'Ubuntu';
     font-weight: bold;
     background-image: 
         radial-gradient(var(--light) 30%, transparent 30%),
@@ -32,15 +32,6 @@ body {
     src: url('/misc/ubuntu-font/Ubuntu-Bold.woff2') format('woff2'),
         url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff');
     font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'minitext';
-    src: url('/legacy/minitext-font/minitext-webfont.woff2') format('woff2'),
-        url('/legacy/minitext-font/minitext-webfont.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
