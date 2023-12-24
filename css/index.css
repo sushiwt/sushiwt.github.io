@@ -35,6 +35,7 @@ p {
 }
 
 h1 {
+    font-weight: normal;
     color:var(--dark);
     margin:0;
     font-size:28px;
