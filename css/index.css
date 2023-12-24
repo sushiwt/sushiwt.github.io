@@ -19,8 +19,8 @@ body {
 
 @font-face {
     font-family: 'Ubuntu';
-    src: url('/misc/ubuntu-font/Ubuntu-Regular.woff2') format('woff2'),
-        url('/misc/ubuntu-font/Ubuntu-Regular.woff') format('woff');
+    src: url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff2'),
+        url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff');
 }
 
 a {
@@ -34,7 +34,6 @@ p {
 }
 
 h1 {
-    font-weight: normal;
     color:var(--dark);
     margin:0;
     font-size:28px;
