@@ -1,4 +1,65 @@
 var directory = ' /misc/'
+var screenWidth = window.screen.width;
+var screenHeight = window.screen.height;
+var shell = 0
+
+function green(message) {
+    return "[[b;#65995F;black]" + message + "]";
+}
+
+var userAgent = navigator.userAgent;
+
+var osRegex = /(Windows|Macintosh|Linux|Android|iOS)/i;
+var archRegex = /x86_64|Win64|WOW64|Intel Mac OS X/;
+
+var osMatch = userAgent.match(osRegex);
+var archMatch = userAgent.match(archRegex);
+
+var os = osMatch ? osMatch[0] : "Unknown OS";
+var architecture = archMatch ? archMatch[0] : "Unknown Architecture";
+   
+if (os == 'Windows') {
+    shell = 'Aero'
+}
+else if (os == 'Macintosh') {
+    shell == 'Aqua'
+}
+else if (os == 'Linux') {
+    shell = 'dunno lol youre on linux you can change whatever'
+}
+else {
+    shell =  'Unknown'
+}
+
+// Function to calculate time difference
+function getTimeDifference() {
+    // Set the target date (April 1, 2023)
+    const targetDate = new Date('2023-04-01T00:00:00');
+    
+    // Get the current date and time
+    const currentDate = new Date();
+    
+    // Calculate the time difference in milliseconds
+    const timeDifference = currentDate - targetDate;
+    
+    // Calculate days, hours, and minutes
+    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    
+    // Return the result as an object
+    return {
+        days: days,
+        hours: hours,
+        minutes: minutes
+    };
+}
+
+// Get the time difference
+const timeDifference = getTimeDifference();
+
+// Display the result
+console.log(`${timeDifference.days} days, ${timeDifference.hours} hours, ${timeDifference.minutes} minutes`);
 
 $(function() {
     $('body').terminal({
@@ -40,8 +101,41 @@ $(function() {
                 this.echo('oops! thats not a value in "go". try again!')
             }
         },
+        neofetch: function() {
+            console.log(navigator.userAgent)
+            this.echo('');
+            this.echo('                      @@@@            [[b;#65995F;black]sushiwt]/[[b;#65995F;black]site]');
+            this.echo('        @@@@@@@   @@@@    @           ----------------------------');
+            this.echo('      @@       @@@         @          [[b;#99507F;]OS:] ' + os + ' ' + architecture);
+            this.echo('     @                 @@   @         [[b;#99507F;]Host:] GitHub Pages');
+            this.echo('    @    @@@@@    @@ @@@@@   @        [[b;#99507F;]Kernel:] null');
+            this.echo('   @   @@@@@@@@@ @@@ @@@@@@   @       [[b;#99507F;]Uptime:] ' + `${timeDifference.days} days, ${timeDifference.hours} hours, ${timeDifference.minutes} minutes`);
+            this.echo('  @   @@@@@@@@@@@ @@@ @@@@@@  @       [[b;#99507F;]Packages:] 1');
+            this.echo(' @   @@@@@@@@@@@@@ @@ @@@@@@  @       [[b;#99507F;]Shell:] https://whytee.xyz/misc/');
+            this.echo(' @  @@@@@@@@@@@@@@@ @@ @@@@   @       [[b;#99507F;]Resolution:] ' + screenWidth + 'x' + screenHeight);
+            this.echo('@   @@@@@@@@@@@@@@@ @@ @@@@  @        [[b;#99507F;]DE:] ' + shell);
+            this.echo('@  @@@@@@@@@@ @@@@ @  @@@@@  @        [[b;#99507F;]WM:] sushiwt/theme 4.0');
+            this.echo('@  @@@@ @@@@ @ @@ @@ @@@@@   @        [[b;#99507F;]WM theme:] Rule34 Green');
+            this.echo('@  @@@ @ @@ @@ @ @@@ @@@@@  @         [[b;#99507F;]Terminal:] JQueryTerminal');
+            this.echo('@  @@ @@ @ @@@@ @@@@ @@@@@  @         [[b;#99507F;]Terminal Font:] monospace');
+            this.echo('@  @ @@@@ @@@@@@@@@@ @@@@   @         [[b;#99507F;]CPU:] null');
+            this.echo('@   @@@@@@@@@@@@@@@ @@@@@   @         [[b;#99507F;]GPU:] null');
+            this.echo(' @  @@@@@@@@@@@ @@@ @@@@@@   @        [[b;#99507F;]Memory:] ????MiB / ????MiB');
+            this.echo(' @   @@@@@ @@@@ @@   @@@@@@   @  ');
+            this.echo('  @   @@@@ @@@@@@    @@@@@@@   @      ███[[b;#65995F;black]███][[b;#D6FFD1;black]███][[b;#AAE5A4;black]███][[b;#99507F;black]███][[b;#E6A5CF;black]███]');
+            this.echo('   @   @@@@@@@@@      @@@@@@@  @ ');
+            this.echo('   @   @@@@@@@@@      @@@@@@@  @ ');
+            this.echo('    @    @@@@@     @           @ ');
+            this.echo('     @           @@ @         @  ');
+            this.echo('      @@       @@    @@@@@@@@@   ');
+            this.echo('        @@@@@@@                  ');
+            this.echo('');
+            this.echo('');
+            this.echo('');
+            
+        }
     }, {
-        greetings: 'welcome to the sushiwt terminal! [Version 1.0] \n(uses jqueryterminal (https://terminal.jcubic.pl/)) \n',
-        prompt: 'whytee.xyz: /misc/ $ ',
+        greetings: 'welcome to the [[b;#65995F;black]sushiwt terminal]! [Version 1.1] \n(uses jqueryterminal (https://terminal.jcubic.pl/)) \n',
+        prompt: '[[b;#65995F;black]https://whytee.xyz]: /misc/ $ ',
     });
 });
