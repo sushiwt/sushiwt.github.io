@@ -104,15 +104,15 @@ $(function() {
         neofetch: function() {
             console.log(navigator.userAgent)
             this.echo('');
-            this.echo('                      @@@@            [[b;#65995F;black]sushiwt]/[[b;#65995F;black]site]');
-            this.echo('        @@@@@@@   @@@@    @           ----------------------------');
-            this.echo('      @@       @@@         @          [[b;#99507F;]OS:] ' + os + ' ' + architecture);
-            this.echo('     @                 @@   @         [[b;#99507F;]Host:] GitHub Pages');
-            this.echo('    @    @@@@@    @@ @@@@@   @        [[b;#99507F;]Kernel:] null');
-            this.echo('   @   @@@@@@@@@ @@@ @@@@@@   @       [[b;#99507F;]Uptime:] ' + `${timeDifference.days} days, ${timeDifference.hours} hours, ${timeDifference.minutes} minutes`);
-            this.echo('  @   @@@@@@@@@@@ @@@ @@@@@@  @       [[b;#99507F;]Packages:] 1');
-            this.echo(' @   @@@@@@@@@@@@@ @@ @@@@@@  @       [[b;#99507F;]Shell:] https://whytee.xyz/misc/');
-            this.echo(' @  @@@@@@@@@@@@@@@ @@ @@@@   @       [[b;#99507F;]Resolution:] ' + screenWidth + 'x' + screenHeight);
+            this.echo('                                            ████████                  [[b;#65995F;black]sushiwt]/[[b;#65995F;black]site]');
+            this.echo('                ██████████████      ████████        ██                ----------------------------');
+            this.echo('            ████              ██████                  ██              [[b;#99507F;]OS:] ' + os + ' ' + architecture);
+            this.echo('          ██                                  ████      ██            [[b;#99507F;]Host:] GitHub Pages');
+            this.echo('        ██        ██████████        ████  ██████████      ██          [[b;#99507F;]Kernel:] null');
+            this.echo('      ██      ██████████████████  ██████  ████████████      ██        [[b;#99507F;]Uptime:] ' + `${timeDifference.days} days, ${timeDifference.hours} hours, ${timeDifference.minutes} minutes`);
+            this.echo('    ██      ██████████████████████  ██████  ████████████    ██        [[b;#99507F;]Packages:] 1');
+            this.echo('  ██      ██████████████████████████  ████  ████████████    ██        [[b;#99507F;]Shell:] https://whytee.xyz/misc/');
+            this.echo('  ██    ██████████████████████████████  ████  ████████      ██        [[b;#99507F;]Resolution:] ' + screenWidth + 'x' + screenHeight);
             this.echo('@   @@@@@@@@@@@@@@@ @@ @@@@  @        [[b;#99507F;]DE:] ' + shell);
             this.echo('@  @@@@@@@@@@ @@@@ @  @@@@@  @        [[b;#99507F;]WM:] sushiwt/theme 4.0');
             this.echo('@  @@@@ @@@@ @ @@ @@ @@@@@   @        [[b;#99507F;]WM theme:] Rule34 Green');
@@ -134,7 +134,7 @@ $(function() {
             
         }
     }, {
-        greetings: 'welcome to the [[b;#65995F;black]sushiwt terminal]! [Version 1.1.2] \n(uses jqueryterminal (https://terminal.jcubic.pl/)) \n',
+        greetings: 'welcome to the [[b;#65995F;black]sushiwt terminal]! [Version 1.1.３] \n(uses jqueryterminal (https://terminal.jcubic.pl/)) \n',
         prompt: '[[b;#65995F;black]https://whytee.xyz]: [[b;#E6A5CF;black]/misc/] $ ',
     });
 });
