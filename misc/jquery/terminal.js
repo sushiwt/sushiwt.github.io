@@ -124,7 +124,6 @@ $(function() {
             this.echo(' @   @@@@@ @@@@ @@   @@@@@@   @  ');
             this.echo('  @   @@@@ @@@@@@    @@@@@@@   @      ███[[b;#65995F;black]███][[b;#D6FFD1;black]███][[b;#AAE5A4;black]███][[b;#99507F;black]███][[b;#E6A5CF;black]███]');
             this.echo('   @   @@@@@@@@@      @@@@@@@  @ ');
-            this.echo('   @   @@@@@@@@@      @@@@@@@  @ ');
             this.echo('    @    @@@@@     @           @ ');
             this.echo('     @           @@ @         @  ');
             this.echo('      @@       @@    @@@@@@@@@   ');
@@ -135,7 +134,7 @@ $(function() {
             
         }
     }, {
-        greetings: 'welcome to the [[b;#65995F;black]sushiwt terminal]! [Version 1.1.1] \n(uses jqueryterminal (https://terminal.jcubic.pl/)) \n',
+        greetings: 'welcome to the [[b;#65995F;black]sushiwt terminal]! [Version 1.1.2] \n(uses jqueryterminal (https://terminal.jcubic.pl/)) \n',
         prompt: '[[b;#65995F;black]https://whytee.xyz]: [[b;#E6A5CF;black]/misc/] $ ',
     });
 });
