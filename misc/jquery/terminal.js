@@ -135,7 +135,7 @@ $(function() {
             
         }
     }, {
-        greetings: 'welcome to the [[b;#65995F;black]sushiwt terminal]! [Version 1.1] \n(uses jqueryterminal (https://terminal.jcubic.pl/)) \n',
-        prompt: '[[b;#65995F;black]https://whytee.xyz]: /misc/ $ ',
+        greetings: 'welcome to the [[b;#65995F;black]sushiwt terminal]! [Version 1.1.1] \n(uses jqueryterminal (https://terminal.jcubic.pl/)) \n',
+        prompt: '[[b;#65995F;black]https://whytee.xyz]: [[b;#E6A5CF;black]/misc/] $ ',
     });
 });
