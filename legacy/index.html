@@ -11,7 +11,18 @@
             font-family: 'Times New Roman', Times, serif;
             color:white;
             margin: 0%;
+            background-image: url("/legacy/230707/img/stars.png");
+            background-repeat: repeat;
+            background-position: 0 0;
+            animation: scroll 120s linear infinite;
         }
+
+
+        @keyframes scroll {
+            0% { background-position: 0 0; }
+            100% { background-position: -2000px 0; }
+        }
+
 
         a {
             color:white
@@ -37,6 +48,7 @@
             padding:30px 20px;
             border-radius: 25px;
             box-shadow: 0px 0px 5px 0px rgb(255, 255, 255) inset;
+            background-color:rgb(0, 0, 0);
         }
 
         .car {
