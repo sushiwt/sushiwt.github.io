@@ -1,0 +1,32 @@
+/*bitch ass sushi deleted all the code for fucking style for dumb animation css file now i gotta rewrite it
+all over again screw you shishi*/
+
+body {
+  font-family: Verdana;
+}
+section {
+  border: dashed;
+  border-color: darkgreen;
+  background-image: url('/mainmenu/green.jpeg');
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+table {
+  width: 75%;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
