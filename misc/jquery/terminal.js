@@ -73,11 +73,11 @@ $(function() {
             this.echo('');
             this.echo('about - tells you about what this section is.');
             this.echo('help - list of commands available (you can also use this as a value for the other commands)');
-            this.echo('go [value] - lets you go to any file and folder inside your current folder:' + directory + '.');
+            this.echo('open [value] - lets you open any file inside your current folder:' + directory + '.');
             this.echo('neofetch -  information about the os');
             this.echo('');
         },
-        go: function(value) {
+        open: function(value) {
             if (value == 'help') {
                 this.echo('');
                 this.echo('here are some values for the go command:');
@@ -135,7 +135,7 @@ $(function() {
             
         }
     }, {
-        greetings: 'welcome to the [[b;#65995F;black]sushiwt terminal]! [Version 1.1.6] \n(uses jqueryterminal (https://terminal.jcubic.pl/)) \n',
+        greetings: 'welcome to the [[b;#65995F;black]sushiwt terminal]! [Version 1.1.7] \n(uses jqueryterminal (https://terminal.jcubic.pl/)) \n',
         prompt: '[[b;#65995F;black]https://whytee.xyz]: [[b;#E6A5CF;black]/misc/] $ ',
     });
 });
