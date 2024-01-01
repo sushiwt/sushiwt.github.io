@@ -1,12 +1,16 @@
 # whytee.xyz
-hello! this is the repository of my website, https://whytee.xyz, hosted on github pages! 
+Hello! This is the repository of my website, https://whytee.xyz.
 
 ## the website includes:
 
-- /index: the home page
-- /blog: where i ramble about my site or my thoughts
-- /myself: everything there is to know about me!
-- /games: all the games i created
-- /extras: art, animations, and others
+- index: the home page
+- blog: where I ramble about my site or my thoughts
+- misc: HTML files that don't fit in any category
+- legacy: the old versions of the website
 
-the site isnt actually finished yet, but it will finish soon, as im actively developing it...
+## things yet to be added:
+- myself: everything there is to know about me!
+- games: all the games I created (built in the website, not hosted in itch.io)
+- extras: art, animations, and others
+
+The site isn't finished yet, but it will be finished soon, as I'm actively developing it...
