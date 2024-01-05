@@ -1,13 +1,13 @@
 body {
     font-family: 'Ubuntu';
     background-image: 
-        radial-gradient(var(--light) 30%, transparent 30%),
-        radial-gradient(var(--light) 30%, transparent 30%);
+        radial-gradient(var(--alt-translucent-main) 30%, transparent 30%),
+        radial-gradient(var(--alt-translucent-main) 30%, transparent 30%);
     background-position: 0px 0px, 104px 104px;
     background-size: 208px 208px;
     margin: 0;
     animation: scrollBackground 15s linear infinite;
-    background-color: var(--main);
+    background-color: var(--light);
 }
 
 
@@ -177,8 +177,8 @@ h1 {
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
     min-width:0;
 
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     display: grid;
     grid-template-columns: 2fr 1fr;
