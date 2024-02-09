@@ -90,7 +90,7 @@ $(function() {
                 this.echo('ubuntu-font/demo.html - the ubuntu font demo');
                 this.echo('');
             }
-            else if (value == '88x31.html' || value == 'sc36.html' || value == 'socials.html' || value == 'inactive.html' || value == 'ubuntu-font/demo.html') {
+            else if (value == '88x31.html' || value == 'sc36.html' || value == 'socials.html' || value == 'inactive.html' || value == 'ubuntu-font/demo.html' || value == 'ramo.html') {
                 this.echo('redirecting...');
                 window.location.href = (directory + value);
             }

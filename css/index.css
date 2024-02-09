@@ -1,13 +1,13 @@
 body {
     font-family: 'Ubuntu';
     background-image: 
-        radial-gradient(var(--alt-translucent-main) 30%, transparent 30%),
-        radial-gradient(var(--alt-translucent-main) 30%, transparent 30%);
+        radial-gradient(var(--light) 30%, transparent 30%),
+        radial-gradient(var(--light) 30%, transparent 30%);
     background-position: 0px 0px, 104px 104px;
     background-size: 208px 208px;
     margin: 0;
     animation: scrollBackground 15s linear infinite;
-    background-color: var(--light);
+    background-color: var(--main);
 }
 
 
@@ -312,7 +312,6 @@ background-color: rgba(0,0,0,0.8);
 .dot:hover {
     background-color: var(--main);
 }
-  
 .active {
     transform: translateY(-2px);
     background-color: var(--main);
