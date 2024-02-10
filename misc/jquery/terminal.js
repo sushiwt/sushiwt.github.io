@@ -80,17 +80,10 @@ $(function() {
         open: function(value) {
             if (value == 'help') {
                 this.echo('');
-                this.echo('here are some values for the go command:');
-                this.echo('');
-                this.echo('legacy - the old versions of the website');
-                this.echo('88x31.html - 88x31 buttons from sites that helped me make my website');
-                this.echo('sc36.html - a remake of sc36.net (December 24th, 2023) in my own "style"');
-                this.echo('socials.html - a link to more of my socials:');
-                this.echo('inactive.html - the old disclaimer about the website being unfinished');
-                this.echo('ubuntu-font/demo.html - the ubuntu font demo');
+                this.echo('nope. figure that out :3. theres a github page for a reason!');
                 this.echo('');
             }
-            else if (value == '88x31.html' || value == 'sc36.html' || value == 'socials.html' || value == 'inactive.html' || value == 'ubuntu-font/demo.html' || value == 'ramo.html') {
+            else if (value.includes('.html')) {
                 this.echo('redirecting...');
                 window.location.href = (directory + value);
             }

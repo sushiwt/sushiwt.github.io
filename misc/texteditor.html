@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sushiwt text editor</title>
+    <style>
+        body {
+            font-family:Ubuntu;
+        }
+
+        @font-face {
+            font-family: 'Ubuntu';
+            src: url('/misc/ubuntu-font/Ubuntu-Regular.woff') format('woff2'),
+                url('/misc/ubuntu-font/Ubuntu-regular.woff') format('woff');
+            font-weight: normal;
+        }
+
+        @font-face {
+            font-family: 'Ubuntu';
+            src: url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff2'),
+                url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff');
+            font-weight: bold;
+        }
+
+        button {
+            font-family:Ubuntu;
+            font-weight: bold;
+            background-color: #65995F;
+            color:white;
+            border-style: none;
+            padding:5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.1s;
+        }
+
+        button:hover {
+            background-color: #457240;
+            transition: background-color 0.1s;
+        }
+
+        #file-input-label:hover {
+            background-color: #457240;
+            transition: background-color 0.1s;
+        }
+
+        #toolbar {
+            width:100%;
+            display:grid; 
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+
+        #load-btn {
+            display: none;
+        }
+
+        #file-input-label {
+            background-color: #65995F;
+            font-weight: bold;
+            color:white;
+            border-style: none;
+            padding:5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.1s;
+        }
+
+        .selected {
+            box-shadow: 0 0 4px #65995F;
+        }
+    </style>
+</head>
+<body>
+    <div class="editor-container">
+        <div id="toolbar">
+            <div>
+                <button id="save-btn">Save</button>
+                <input type="file" id="load-btn" name="file-input" >
+                <label id="file-input-label" for="load-btn">Load</label>
+            </div>
+            <div>
+                <p style="margin:3px; text-align: center;">sushiwt text editor! 1.0</p>
+            </div>
+            <div>
+                <div style="float: right;">
+                    <button id="bold-btn">Bold</button>
+                    <button id="italic-btn">Italic</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="editor" contenteditable="true">
+            type whatever you want!
+        </div>
+    </div>
+    <div style="position:fixed; bottom: 0; margin: 8px 0px;">                
+        <button id="save-btn-html">Save as HTML</button>
+        <button id="assignHTML">Assign HTML</button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const boldBtn = document.getElementById("bold-btn");
+            const italicBtn = document.getElementById("italic-btn");
+            const saveBtn = document.getElementById("save-btn");
+            const saveBtnHTML = document.getElementById("save-btn-html");
+            const loadBtn = document.getElementById("load-btn");
+            const assignHTML = document.getElementById("assignHTML");
+            const editor = document.getElementById("editor");
+
+            var el = document.querySelector('#editor')
+
+            boldBtn.addEventListener("click", function() {
+                document.execCommand("bold", false, null);
+            });
+
+            italicBtn.addEventListener("click", function() {
+                document.execCommand("italic", false, null);
+            });
+
+            saveBtn.addEventListener("click", function() {
+                const fileName = prompt("Enter file name (without extension):");
+                if (fileName) {
+                    saveAsTxt(fileName);
+                }
+            });
+
+            saveBtnHTML.addEventListener("click", function() {
+                const fileName = prompt("Enter file name (without extension):");
+                if (fileName) {
+                    saveAsHTML(fileName);
+                }
+            });
+
+            assignHTML.addEventListener("click", function() {
+                el.addEventListener('blur', function() {
+                var map = {amp: '&', lt: '<', gt: '>', quot: '"', '#039': "'"}
+                var html = this.innerHTML.replace(/&([^;]+);/g, (m, c) => map[c]);
+                this.innerHTML = html;
+                });
+            });
+
+            loadBtn.addEventListener("change", function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    loadTxt(file);
+                }
+            });
+
+            function saveAsTxt(fileName) {
+                const content = editor.innerText;
+                const blob = new Blob([content], { type: "text/plain" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = fileName + ".txt";
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }
+
+
+            function saveAsHTML(fileName) {
+                const content = editor.innerHTML;
+                const blob = new Blob([content], { type: "text/plain" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = fileName + ".html";
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }
+
+            function loadTxt(file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    editor.innerText = event.target.result;
+                };
+                reader.readAsText(file);
+            }
+        });
+    </script>
+</body>
+</html>
