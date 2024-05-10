@@ -385,3 +385,26 @@ background-color: rgba(0,0,0,0.8);
     box-shadow:  0px 0px 15px 0px var(--main-inv);
     transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
+
+.extras-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+}
+
+.window {
+    border-style:solid;
+    padding:10px 10px;
+    border-radius: 20px;
+    background-color: var(--translucent-main);
+    border-color: var(--border);
+    border-width: 2px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+    min-width:0;
+    height:400px;
+    
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
