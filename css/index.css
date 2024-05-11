@@ -127,7 +127,7 @@ h1 {
 
 
 .disclaimer {
-    filter: opacity(50%);
+    filter: opacity(0%);
     user-select: none;
     transform: translateY(95px);
     transition: filter 0.3s, transform 0.2s;
