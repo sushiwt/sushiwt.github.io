@@ -9,20 +9,98 @@
             background-color: black;
             margin: 0;
             color:white;
+            font-family: 'Ubuntu';
         }
-        img {
-           float: left;
+
+        
+        @font-face {
+            font-family: 'Ubuntu';
+            src: url('/misc/ubuntu-font/Ubuntu-Regular.woff') format('woff2'),
+                url('/misc/ubuntu-font/Ubuntu-Regular.woff') format('woff');
+        }
+
+        .gallery {
+            display:flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 0;
+        }
+        .gallery img {
+            float: left;
+            width:256px;
+            transition: transform 0.5s ease-in;
+            image-rendering:pixelated;
+            border-radius: 10px;
+            overflow:hidden;
+            
+        }
+
+        .gallery img:hover {
+            transition: transform 0.1s ease-out;
+            transform: translate(0px,-10px);
+            cursor: pointer; /* Add a pointer on hover */
+        }
+        #overlay {
+            position: fixed; /* Sit on top of the page content */
+            display: none; /* Hidden by default */
+            width: 100%; /* Full width (cover the whole page) */
+            height: 100%; /* Full height (cover the whole page) */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: rgba(0,0,0,0.75); /* Black background with opacity */
+            z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap:20px;
+        }
+
+        #image-overlay {
+            max-width:80%;
+            max-height:80%;
+            border-radius:10px;
         }
     </style>
+    <script>
+        function on(path, title) {
+            document.getElementById("overlay").style.display = "flex";
+
+            var imageoverlay = document.getElementById("image-overlay");
+            var imagelocation = document.getElementById("image-location");
+            var imageinfo = document.getElementById("image-info");
+
+            imageoverlay.src = path;
+            imagelocation.textContent = path;
+            imageinfo.textContent = title;
+        }
+
+        function off() {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
 </head>
 <body>
-    <p>&nbsp;&nbsp;&nbsp;sorted by date. hover mouse for art creation date</p>
+    <p align="center">&nbsp;&nbsp;&nbsp;sorted by date. click for the real size and additional information</p>
     <div class="gallery">
-        <img src="/img/artwork/red_and_blue.png" title="2025-01-23">
-        <img src="/img/artwork/flower.png" title="2024-11-02">
-        <img src="/img/artwork/painfully_blue.png" title="2024-10-29">
-        <img src="/img/artwork/omars_birthday.png" title="2024-10-16 (resized)" width="128">
-        <img src="/img/artwork/emo_ramo.png" title="2024-10-16 (resized)" width="128">
+        <img onclick="on(src, title)" src="/img/artwork/red_and_blue.png" title="Created in 2025-01-23">
+        <img onclick="on(src, title)" src="/img/artwork/flower.png" title="Created in 2024-11-02">
+        <img onclick="on(src, title)" src="/img/artwork/painfully_blue.png" title="Created in 2024-10-29">
+        <img onclick="on(src, title)" src="/img/artwork/omars_birthday.png" title="Created in 2024-10-16">
+        <img onclick="on(src, title)" src="/img/artwork/emo_ramo.png" title="Created in 2024-10-16">
+        <img onclick="on(src, title)" src="/img/artwork/implosion.png" title="Created in 2024-02-12">
+        <img onclick="on(src, title)" src="/img/artwork/shackles.png" title="Created in 2024-02-06">
+        <img onclick="on(src, title)" src="/img/artwork/am_i_weird.png" title="Created in 2024-01-29">
+        <img onclick="on(src, title)" src="/img/artwork/ryan.png" title="Created in 2024-01-24">
     </div>  
+    
+    <div id="overlay" onclick="off()">
+            <img id="image-overlay" src="" title="">
+            <div id="image-location"></div>
+            <div id="image-info"></div>
+    </div>
 </body>
 </html>
