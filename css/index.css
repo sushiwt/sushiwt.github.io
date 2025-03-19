@@ -1,3 +1,16 @@
+:root {
+    --main: #fff;
+    --main-inv: #565656;
+    --dark: #65995F;
+    --light: #D6FFD1;
+    --normal: #AAE5A4;
+    --alt-dark: #99507F;
+    --alt-light: #E6A5CF;
+    --translucent-main: rgba(255,255,255,0.50);
+    --alt-translucent-main: rgba(0, 0, 0, 0.05);
+    --svg-color: invert(56%) sepia(28%) saturate(572%) hue-rotate(67deg) brightness(93%) contrast(86%) drop-shadow(0px 2px 0px rgba(4, 83, 0, 0.205));
+    --border: #D6FFD1;
+}
 body {
     font-family: 'Ubuntu';
     background-image: 
@@ -128,7 +141,7 @@ h1 {
 
 
 .disclaimer {
-    filter: opacity(0%);
+    filter: opacity(40%);
     user-select: none;
     transform: translateY(95px);
     transition: filter 0.3s, transform 0.2s;
@@ -388,17 +401,19 @@ background-color: rgba(0,0,0,0.8);
     }
 }   
 @media only screen and (max-width: 610px) {
+    .content {
+        flex-direction: column;
+        margin:0;
+        width:100vw;
+    }
+
     .carousel {
         margin-right: 0px;
         width:0;
     }
-
-    .content {
-        flex-direction: column;
-    }
     
     .mainmenu {
-        width:fit-content;
+        width:100vw;
         justify-content: center;
     }
 
@@ -409,6 +424,8 @@ background-color: rgba(0,0,0,0.8);
     .navbar {
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns:1fr;
+        width:100vw;
+        border-radius:0;
     }
 
     #title-img {
@@ -420,18 +437,14 @@ background-color: rgba(0,0,0,0.8);
         margin-left: auto;
         margin-right: auto;
         padding:0;
+        width:min-content
     }
 
 
-    .extras-grid {
+    /* .extras-grid {
         flex-direction: column;
         justify-content: center;
-    }
-
-
-    .window {
-        width:323px;
-    }
+    } */
 
     .eighteightwindow {
         flex-direction: column; 
