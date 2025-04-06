@@ -8,25 +8,58 @@
     <style>
         body {
             margin: 0;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight:600;
+            font-size:24px;
+            margin:20px;
+            text-align: center; 
         }
+
+        a {
+            color:white;
+            text-decoration: none;
+        }
+
         .social-media-button {
-            width:fit-content; border-radius: px; padding:6px 10px; text-align: center
+            max-width:600px;
+            margin: auto;
+        }
+
+        .social-media-button div {
+            text-align: left; 
+            text-shadow:#36465D;
+            padding:25px 25px;
+            margin-bottom:20px;
+            border-radius:15px;
+            -webkit-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.1);
+            -moz-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.1);
+            box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .social-media-button div:hover {
+            transform: translate(0, -4px);
+            transition: transform 0.2s;
         }
     </style>
 </head>
 <body>
-    <div style="display:flex">
-        <div style="background-color: red;" class="social-media-button"> YouTube</div>
-        <div style="background-color: #36465D;" class="social-media-button"> tumblr</div>
-        <div style="background-color: #1DA1F2;" class="social-media-button"> Twitter</div>
-        <div style="background-color: #5865F2;" class="social-media-button"> Discord</div>
-        <div style="background-color: #fa5c5c;" class="social-media-button"> Itch</div>
-        <div style="background-color: rgb(0, 133, 255);" class="social-media-button"> Bluesky</div>
-        <div style="background-color: orangered;" class="social-media-button"> SoundCloud</div>
-        <div style="background-color: #629aa9;" class="social-media-button"> Bandcamp</div>
-        <div style="background-color: orange;" class="social-media-button"> Newgrounds</div>
-        <div style="background-color: purple;" class="social-media-button"> Twitch</div>
-        <div style="background-color: lightgreen;" class="social-media-button"> Deviantart</div>
+    <a href="/"><--- back to main</a>
+    <h1>all my public socials :3</h1>
+    <div class="social-media-button"> 
+        <a href="https://youtube.com/@sushiwth"><div style="background-color: rgb(224, 2, 2);"> YouTube (@sushiwth)</div></a>
+        <a href="https://youtube.com/@sushiwtlive"><div style="background-color: rgb(255, 0, 21);"> YouTube (@sushiwtlive)</div></a>
+        <a href="https://sushiwt.tumblr.com"><div style="background-color: #36465D;"> tumblr</div></a>
+        <a href="https://x.com/sushiwth"><div style="background-color: #1DA1F2;"> X (formerly Twitter)</div></a>
+        <a href="https://discord.gg/rsJGH4ZGRH"><div style="background-color: #5865F2;"> Discord (my friends server)</div></a>
+        <a href="https://sushiwt.itch.io"><div style="background-color: #fa5c5c;"> itch.io</div></a>
+        <a href="https://bsky.app/profile/whytee.xyz"><div style="background-color: rgb(0, 133, 255);"> Bluesky</div></a>
+        <a href="https://soundcloud.com/didjoey"><div style="background-color: orangered;"> SoundCloud</div></a>
+        <a href="https://bandcamp.com/sushiwt"><div style="background-color: #629aa9;"> Bandcamp</div></a>
+        <a href="https://yoshiyoutube.newgrounds.com/"><div style="background-color: orange;"> Newgrounds</div></a>
+        <a href="https://www.twitch.tv/sushiwth"><div style="background-color: purple;"> Twitch</div></a>
+        <a href="https://www.deviantart.com/sushiwhytee/"><div style="background-color: lightgreen;"> Deviantart</div></a>
     </div>
     <p>
     </p>
