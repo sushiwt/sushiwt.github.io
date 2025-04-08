@@ -374,6 +374,8 @@ background-color: rgba(0,0,0,0.8);
     border-color: var(--border);
     border-width: 2px;
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15); 
+    height:400px;
+
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
