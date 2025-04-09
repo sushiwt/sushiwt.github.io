@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Ubuntu';
+        }
+
+        @font-face {
+            font-family: 'Ubuntu';
+            src: url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff2'),
+                url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff');
+        }
+
+        #content {
+            width: 800px;
+            margin: 0 auto 0 auto; 
+        }
+
+        /* the red for .box is a temporary color. 
+           it will be replaced by the actual
+           design of the panels (light green border,
+           translucent white background) */
+        .box {
+            background-color: red;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            background-color: lime;
+        }
+
+
+        #navbar {
+            height:80px; 
+            margin-bottom:50px;
+        }
+
+        #title {
+            line-height:8px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px; 
+
+            margin-bottom:4px;
+        }
+
+        #title-button {
+            width:fit-content;
+            margin-left: auto;
+            margin-bottom: auto;
+            padding:0 10px;
+        }
+
+        #info-box { 
+            height:380px;  
+            padding:10px;
+
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-column-gap: 10px;
+        }
+        
+        /* the is used as a placeholder
+           to indicate info-box contents.
+           this will be removed once i finish
+           the layout as it isn't necessary */
+        #info-box div {
+            background-color: blue;
+        }
+
+        /* until i find a way to move the social media
+           buttons to the bottom, this is the best i could do. */
+        #info-box-bio {
+            display:grid;
+            grid-template-rows: 1fr;
+        }
+
+        #info-box-text {
+            margin-bottom: auto;
+        }
+
+        #info-box-text p {
+            line-height:1.25;
+            font-size:12px;
+            margin:0;
+            padding-right: 10px;
+        }
+
+        #info-box-socials h1 {
+            font-size: 16px; 
+            margin-bottom: 5px;
+        }
+
+        #info-box-socials-links {
+            display:flex;
+            font-size:12px;
+        }
+
+        #info-box-socials-links a {
+            background-color: white;
+            padding:3px 8px; 
+            margin-right: 3px;
+        }
+
+        .long-box {
+            padding:10px;
+        }
+
+        .three-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 10px;
+            grid-row-gap: 0px; 
+        }
+
+        .three-boxes .box {
+            padding:10px;
+            line-height: 0;
+        }
+
+        .three-boxes .box h1 {
+            font-size:18px;
+            line-height: 10px;
+        }
+ 
+        #double8x31 {
+            display:flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div id="navbar" class="box">
+
+        </div>
+        <div id="title">
+            <h1>Welcome to my website!</h1>
+
+            <div id="title-button" class="button">
+                <h3>Visit /legacy</h3>
+            </div>
+        </div> 
+        <div id="info-box" class="box"> 
+            <div id="info-box-carousel">
+
+            </div>
+
+            <div id="info-box-bio">
+                <div>
+                    <img src="/img/slooshi.png">
+                    <div id="info-box-text">
+                        <p>Hey there! My name is sushiwt, but you can call me sushi  :3 <br><br>
+                        I am a game developer, 3d modeller, artist, web designer, or whatever I am feeling atm <br><br>
+                        I made this website because I wanted a place where I can show off things I made, kinda like a portfolio.<br><br>
+                        Hope you enjoy my stuff!</p>
+                    </div>
+                </div>
+                <div id="info-box-socials">
+                    <h1>My main social media:</h1>
+                    <div id="info-box-socials-links">
+                        <a href="https://youtube.com/sushiwth" target="_blank">YouTube</a>
+                        <a href="https://twitter.com/sushiwth" target="_blank">Twitter</a>
+                        <a href="https://sushiwt.tumblr.com/" target="_blank">Tumblr</a>
+                        <a href="https://sushiwt.itch.io" target="_blank">Itch</a>
+                        <a href="https://bsky.app/profile/whytee.xyz" target="_blank">Bluesky</a>
+                        <a href="/misc/socials.html" target="_blank">+</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box long-box">
+            <img src="https://ghchart.rshah.org/sushiwt" alt="2016rshah's Github chart" style="width:100%; filter: opacity(80%);"/>
+            <p align="center" style="line-height: 0;">sushiwt GitHub Contribution Graph (graph by <a href="https://rshah.org">rshah.org</a>)</p>
+        </div>
+        <div class="three-boxes">
+            <div id="games-working-on" class="box">
+                <img src="/img/art/aVNEBi.png" style="width:100%; height:80%; border-radius:10px;">
+                
+                <p align="center">Games I'm working on/for:</p>
+                <h1 align="center">Undertale Amethyst</h1> 
+            </div>
+            <div class="box">
+                
+            </div>
+            <div class="box">
+                
+            </div>
+        </div>
+        <div id="double8x31" class="box long-box">
+            <a href="https://whytee.xyz"><img src="/img/88x31/whytee.xyz.gif"></a>
+            <a href="https://sushiwt.neocities.org"><img src="/img/88x31/sushiwt.neocities.org.webp"></a>
+            <a href="https://w3schools.com"><img src="/img/88x31/w3schools.com.gif"></a>
+            <a href="https://youtube.com/@daytell"><img src="/img/88x31/dayteller.gif"></a>
+            <a href="https://sugarforbrains.neocities.org"><img src="/img/88x31/sugarforbrains.neocities.org.gif"></a>
+            <a href="https://adilene.net"><img src="/img/88x31/adilene.net.png"></a>
+            <a href="https://neoratz.neocities.org.gif"><img src="/img/88x31/neoratz.neocities.org.gif"></a>
+            <a href="https://mozilla.org/en-GB/firefox"><img src="/img/88x31/mozilla.org.gif"></a>
+        </div>
+    </div>
+</body>
+</html>

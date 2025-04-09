@@ -23,17 +23,16 @@ body {
     background-color: var(--main);
 }
 
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff2'),
+        url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff');
+}
 
 @keyframes scrollBackground {
     100% {
         background-position: 104px 104px, 208px 208px;
     }
-}
-
-@font-face {
-    font-family: 'Ubuntu';
-    src: url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff2'),
-        url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff');
 }
 
 a {
