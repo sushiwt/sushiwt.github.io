@@ -1,4 +1,11 @@
 :root {
+    /* box variables */
+    --box-radius: 20px;
+    --box-content-padding: 10px;
+    --box-content-radius: calc(var(--box-radius) - var(--box-content-padding)) ;
+    --outline: #00000007;
+
+    /* color variables */
     --main: #fff;
     --main-inv: #565656;
     --dark: #65995F;
@@ -7,20 +14,20 @@
     --alt-dark: #99507F;
     --alt-light: #E6A5CF;
     --translucent-main: rgba(255,255,255,0.50);
-    --alt-translucent-main: rgba(0, 0, 0, 0.05);
     --svg-color: invert(56%) sepia(28%) saturate(572%) hue-rotate(67deg) brightness(93%) contrast(86%) drop-shadow(0px 2px 0px rgba(4, 83, 0, 0.205));
-    --border: #D6FFD1;
 }
+
 body {
     font-family: 'Ubuntu';
+    margin:10px; 
+
     background-image: 
         radial-gradient(var(--light) 30%, transparent 30%),
         radial-gradient(var(--light) 30%, transparent 30%);
     background-position: 0px 0px, 104px 104px;
     background-size: 208px 208px;
-    margin: 0;
     animation: scrollBackground 15s linear infinite;
-    background-color: var(--main);
+    
 }
 
 @font-face {
@@ -35,13 +42,7 @@ body {
     }
 }
 
-a {
-    color:var(--dark);
-}
-
 p {
-    line-height:1.25;
-    margin:0;
     color:var(--main-inv); 
     font-size: 12px;
 }
@@ -49,409 +50,203 @@ p {
 h1 {
     font-weight: normal;
     color:var(--dark);
-    margin:0;
     font-size:28px;
     text-shadow: 0px 2px 0px rgba(4, 83, 0, 0.205)
 }
 
-/* the classes from navbar to .dm-switch are all for the navigation bar :skull: */
-.navbar {
+a {
+    color:var(--dark);
+    text-decoration: none;
+}
+
+#content {
+    width: 800px;
+    margin: 0 auto 0 auto; 
+}
+
+/* reusable designs and styles */
+.box {
     background-color: var(--translucent-main);
-    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
-    border: 2px solid var(--border);
+    border-radius: var(--box-radius); 
+    outline: 2px solid var(--light); 
     backdrop-filter: blur(20px);
-    width:100;
-    padding:10px 0;
-    margin-bottom: 50px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+    margin-bottom: 15px;
 }
 
-.navbar {
+.long-box .box {
+    padding:10px;
+}
+
+.three-boxes {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+}
+
+.three-boxes .box {
+    padding:10px;
+    line-height: 0;
+}
+
+.three-boxes .box h1 {
+    font-size:18px;
+    line-height: 10px;
+}
+
+.text-only-box {
+    margin-bottom:60px;
+}
+
+.text-only-box .box {
+    color: var(--main-inv);
+    width:fit-content;
+    padding:10px 20px;
+}
+
+/* element specific ids */
+#navbar {
+    height:75px; 
+    margin-bottom:50px;
+    display:grid;
     grid-template-columns: repeat(2, 1fr);
-    border-radius: 20px;
-} 
-
-.title {
-    padding: 0 32px;
-    display: flex;
-    align-items: center;
+    grid-template-rows: 1fr;
 }
 
-.inv-title {
-    filter: brightness(3)
+#navbar-title {
+    margin:12px 30px; 
 }
 
-.buttons {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    padding: 0 32px;
-    
+#navbar-buttons {
+    margin:auto 30px auto auto; 
 }
 
-.buttonset {
+#navbar-buttons-set {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 24px;
 }
 
-.buttonset img {
+#navbar-buttons-set img {
     width: 28px;
     filter: var(--svg-color);
 }
 
-.qna {
-    cursor:pointer;
-    margin: 0 0 0 28px;
-    background-color: var(--dark);
-    padding: 2px 5px;
-    width: 50px;
-    height: 30px;
-    color: var(--main);
-    border-radius: 30px;
-    box-shadow: 0px 2px 0px rgba(4, 83, 0, 0.205);
-    display: flex;
-    justify-content: left;
-    align-items: center;
+#title {
+    line-height:8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+
+    margin-bottom:4px;
 }
 
-.qna-on {
-    justify-content: right;
+#title-button {
+    background-color:var(--dark);
+    color:var(--main); 
+    width:fit-content;
+    margin-left: auto;
+    margin-bottom: auto;
+    padding: 15px 12px;
+    outline-color: #fff;
+    outline-width: 0px;
+    outline-style: solid;
+    border-radius:10px;
+    transition: background-color 0.1s, color 0.1s, box-shadow 0.1s;
 }
 
-.dm-switch {
-    background-color: var(--main);
-    width:24px;
-    height:24px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+#title-button:hover {
+    background-color: black;
+    color:var(--main); 
+    box-shadow:  0px 0px 15px 0px black;
+    outline-width: 2px;
 }
 
-.dm-switch img {
-    width:18px;
-    filter: var(--svg-color)
-}
-
-/*  the disclaimer classes are for the little message in the 
-    bottom left corner of the screen lol    */
-
-
-.disclaimer {
-    filter: opacity(40%);
-    user-select: none;
-    transform: translateY(95px);
-    transition: filter 0.3s, transform 0.2s;
-
-}
-
-.disclaimer h1 {
-    transition: margin 0.2s;
-    margin: 10px 10px 20px 10px;
-}
-
-.disclaimer:hover {
-    transition: filter 0.2s, transform 0.2s;
-    transform: translateY(0);
-    filter: opacity(100%);
-}
-
-.disclaimer:hover h1 {
-    transition: margin 0.2s;
-    margin: 10px 10px 15px 10px;
-}
-
-/* this one is for the actual website */
-
-.content {
-    display: flex;
-    justify-content: center;
-    margin:10px;
-}
-
-.mainmenu {
-    width:800px;
-}
-
-.mainmenu h1 {
-    margin-bottom:10px;
-}
-
-.gallery {
-    border-style:solid;
-    padding:10px 10px;
-    border-radius: 20px;
-    background-color: var(--translucent-main);
-    border-color: var(--border);
-    border-width: 2px;
-    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
-    min-width:0;
-
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+#info-box { 
+    height:380px;  
+    padding:var(--box-content-padding);
 
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-column-gap: 10px;
 }
 
-.description {
-    position:relative;
-    width: 324px;
-    display: flex;
-    flex-direction: column;
+#info-box div {
+    border-radius: var(--box-content-radius);
 }
 
+#info-box-bio { 
+    /* until i find a way to move the social media
+    buttons to the bottom, this is the best i could do. */
+    display:grid;
+    grid-template-rows: 1fr;
+}
 
-.desc-image {
+#info-box-image {
+    border-top-right-radius:var(--box-content-radius);
+    border-top-left-radius:5px;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
-    height: 151px;
-    box-shadow:  0px 0px 15px 0px rgba(0,0,0,0.15);
-    border-radius: 10px;
-    overflow: hidden;
-    width: auto;
 }
 
-.desc-text {
-    padding-top:10px;
-    padding-right:14px;
+#info-box-text {
+    margin-bottom: auto;
 }
 
-.social-media-set {
-    position:absolute;
-    bottom:0;
-}
-
-.set-button-social {
-    display:flex;
-}
-
-.social-button {
-    font-size: 12px;
-    padding:3px 8px;
-    background-color: var(--dark);
-    border-radius: 5px;
-    width:fit-content;
-    margin-right:3px;
-    transition: background-color 0.1s;
-}
-
-.social-button:hover {
-    background-color: var(--normal);
-    transition: background-color 0.1s;
-}
-
-.social-button a {
-    text-decoration: none;
-    color:var(--main);
-}
-
-/* other styles for the carousel */
-
-.carousel {
-    box-shadow:  0px 0px 15px 0px rgba(0,0,0,0.15);
-    border-radius: 10px;
-    height:380px;
-    margin-right: 10px;
-    overflow: hidden;
-    background-color: rgba(31, 51, 36, 0.89);
-}
-
-.mySlides {
-    padding: 0;
-}
-
-.mySlides img {
-    height: 326px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, 0.5);
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 0.25s;
+#info-box-text p {
+    padding-right: 10px;
     margin:0;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
+}
 
+#info-box-socials h1 {
+    font-size: 16px; 
+    margin-bottom: 5px;
+}
 
-.prev, .next {
-    cursor: pointer;
-    top: 2%;
-    width: auto;
-    height: 30px;
-    padding: 8px;
-    transition: 0.25s ease;
+#info-box-socials-links {
+    display:flex;
+    font-size:12px;
+}
+
+#info-box-socials-links a {
+    background-color: var(--dark);
+    color: white;
+    padding:3px 8px; 
+    margin-right: 3px;
     border-radius: 5px;
-    background-color: rgba(0,0,0,0.25);
-    transform: translate(0, -30px);
+    text-decoration: none;
 }
 
-.prev {
-    float: left;
-    margin-left: 10px;
+/* special classes for specific contents in boxes */
+#utamethyst-image {
+    width:100%; 
+    height:80%; 
+    margin-bottom: 5px;
+    border-radius: var(--box-content-radius);
 }
 
-.next {
-    margin-right: 10px;
-    float: right;
-}
-
-.prev:hover, .next:hover {
-background-color: rgba(0,0,0,0.8);
-}
-
-.carousel-arrow {
-    filter: invert(100%) sepia(99%) saturate(2%) hue-rotate(216deg) brightness(105%) contrast(100%);
-    width:30px;
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #3a3a3a3d;
-    border-radius: 50%;
-    transition: background-color 0.2s ease;
-    box-shadow:  0px 0px 15px 0px rgba(0,0,0,0.15);
-}
-
-.dot:hover {
-    background-color: var(--main);
-}
-.active {
-    transform: translateY(-2px);
-    background-color: var(--main);
-}
-
-.image-strip {
-    background-color: var(--dark);    
-    width:100%;
-    height:40px;
-    padding-top: 20px;
-    border-top: solid #3a3a3a3d 2px;
-    transform: translateY(-6px);
-}
-.legacy-mainmenu-button {
-    width:fit-content; 
-    float: right; 
-    background-color: var(--dark); 
-    color:var(--main); 
-    padding:8px;
-    border-radius:10px;
-    box-shadow:  0px 0px 2px 0px var(--main-inv);
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
-}
-
-.legacy-mainmenu-button:hover {
-    background-color: var(--main-inv);
-    color:var(--main); 
-    box-shadow:  0px 0px 15px 0px var(--main-inv);
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
-}
-
-.extras-grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.window {
-    border-style:solid;
-    padding:10px 10px;
-    border-radius: 20px;
-    background-color: var(--translucent-main);
-    border-color: var(--border);
-    border-width: 2px;
-    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15); 
-    height:400px;
-
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
-.extras-grid .window{
-    width:400px;
-}
-
-.githubchart {
-    height:min-content;
-}
-
-.eighteightwindow {
-    height:min-content; 
-    display: flex; 
-    flex-direction: row; 
+#double8x31 {
+    display:flex;
     justify-content: space-evenly;
 }
 
-.mobile-chat {
-    height:fit-content;
+#double8x31 {
+    display:flex;
+    justify-content: space-evenly;
 }
 
-@media only screen and (max-width: 680px) {
-    .disclaimer {
-        display:none;
-    }
-}   
-@media only screen and (max-width: 610px) {
-    .content {
-        flex-direction: column;
-        margin:0;
-        width:100vw;
-    }
+#double8x31 a {
+    width:88px;
+    height:31px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+}
 
-    .carousel {
-        margin-right: 0px;
-        width:0;
-    }
-    
-    .mainmenu {
-        width:100vw;
-        justify-content: center;
-    }
-
-    .gallery {
-        grid-template-columns: 0fr 1fr;
-    }
-
-    .navbar {
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns:1fr;
-        width:100vw;
-        border-radius:0;
-    }
-
-    #title-img {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .buttons {
-        margin-left: auto;
-        margin-right: auto;
-        padding:0;
-        width:min-content
-    }
-
-
-    /* .extras-grid {
-        flex-direction: column;
-        justify-content: center;
-    } */
-
-    .eighteightwindow {
-        flex-direction: column; 
-    }
-    
-
+#disclaimer .box {
+    padding: 10px 20px;
+    width:fit-content
 }

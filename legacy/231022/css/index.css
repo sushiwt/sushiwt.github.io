@@ -1,0 +1,457 @@
+:root {
+    --main: #fff;
+    --main-inv: #565656;
+    --dark: #65995F;
+    --light: #D6FFD1;
+    --normal: #AAE5A4;
+    --alt-dark: #99507F;
+    --alt-light: #E6A5CF;
+    --translucent-main: rgba(255,255,255,0.50);
+    --alt-translucent-main: rgba(0, 0, 0, 0.05);
+    --svg-color: invert(56%) sepia(28%) saturate(572%) hue-rotate(67deg) brightness(93%) contrast(86%) drop-shadow(0px 2px 0px rgba(4, 83, 0, 0.205));
+    --border: #D6FFD1;
+}
+body {
+    font-family: 'Ubuntu';
+    background-image: 
+        radial-gradient(var(--light) 30%, transparent 30%),
+        radial-gradient(var(--light) 30%, transparent 30%);
+    background-position: 0px 0px, 104px 104px;
+    background-size: 208px 208px;
+    margin: 0;
+    animation: scrollBackground 15s linear infinite;
+    background-color: var(--main);
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff2'),
+        url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff');
+}
+
+@keyframes scrollBackground {
+    100% {
+        background-position: 104px 104px, 208px 208px;
+    }
+}
+
+a {
+    color:var(--dark);
+}
+
+p {
+    line-height:1.25;
+    margin:0;
+    color:var(--main-inv); 
+    font-size: 12px;
+}
+
+h1 {
+    font-weight: normal;
+    color:var(--dark);
+    margin:0;
+    font-size:28px;
+    text-shadow: 0px 2px 0px rgba(4, 83, 0, 0.205)
+}
+
+/* the classes from navbar to .dm-switch are all for the navigation bar :skull: */
+.navbar {
+    background-color: var(--translucent-main);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+    border: 2px solid var(--border);
+    backdrop-filter: blur(20px);
+    width:100;
+    padding:10px 0;
+    margin-bottom: 50px;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 20px;
+} 
+
+.title {
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+}
+
+.inv-title {
+    filter: brightness(3)
+}
+
+.buttons {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 0 32px;
+    
+}
+
+.buttonset {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 24px;
+}
+
+.buttonset img {
+    width: 28px;
+    filter: var(--svg-color);
+}
+
+.qna {
+    cursor:pointer;
+    margin: 0 0 0 28px;
+    background-color: var(--dark);
+    padding: 2px 5px;
+    width: 50px;
+    height: 30px;
+    color: var(--main);
+    border-radius: 30px;
+    box-shadow: 0px 2px 0px rgba(4, 83, 0, 0.205);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.qna-on {
+    justify-content: right;
+}
+
+.dm-switch {
+    background-color: var(--main);
+    width:24px;
+    height:24px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.dm-switch img {
+    width:18px;
+    filter: var(--svg-color)
+}
+
+/*  the disclaimer classes are for the little message in the 
+    bottom left corner of the screen lol    */
+
+
+.disclaimer {
+    filter: opacity(40%);
+    user-select: none;
+    transform: translateY(95px);
+    transition: filter 0.3s, transform 0.2s;
+
+}
+
+.disclaimer h1 {
+    transition: margin 0.2s;
+    margin: 10px 10px 20px 10px;
+}
+
+.disclaimer:hover {
+    transition: filter 0.2s, transform 0.2s;
+    transform: translateY(0);
+    filter: opacity(100%);
+}
+
+.disclaimer:hover h1 {
+    transition: margin 0.2s;
+    margin: 10px 10px 15px 10px;
+}
+
+/* this one is for the actual website */
+
+.content {
+    display: flex;
+    justify-content: center;
+    margin:10px;
+}
+
+.mainmenu {
+    width:800px;
+}
+
+.mainmenu h1 {
+    margin-bottom:10px;
+}
+
+.gallery {
+    border-style:solid;
+    padding:10px 10px;
+    border-radius: 20px;
+    background-color: var(--translucent-main);
+    border-color: var(--border);
+    border-width: 2px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+    min-width:0;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.description {
+    position:relative;
+    width: 324px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.desc-image {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    height: 151px;
+    box-shadow:  0px 0px 15px 0px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    width: auto;
+}
+
+.desc-text {
+    padding-top:10px;
+    padding-right:14px;
+}
+
+.social-media-set {
+    position:absolute;
+    bottom:0;
+}
+
+.set-button-social {
+    display:flex;
+}
+
+.social-button {
+    font-size: 12px;
+    padding:3px 8px;
+    background-color: var(--dark);
+    border-radius: 5px;
+    width:fit-content;
+    margin-right:3px;
+    transition: background-color 0.1s;
+}
+
+.social-button:hover {
+    background-color: var(--normal);
+    transition: background-color 0.1s;
+}
+
+.social-button a {
+    text-decoration: none;
+    color:var(--main);
+}
+
+/* other styles for the carousel */
+
+.carousel {
+    box-shadow:  0px 0px 15px 0px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    height:380px;
+    margin-right: 10px;
+    overflow: hidden;
+    background-color: rgba(31, 51, 36, 0.89);
+}
+
+.mySlides {
+    padding: 0;
+}
+
+.mySlides img {
+    height: 326px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 0.25s;
+    margin:0;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+.prev, .next {
+    cursor: pointer;
+    top: 2%;
+    width: auto;
+    height: 30px;
+    padding: 8px;
+    transition: 0.25s ease;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.25);
+    transform: translate(0, -30px);
+}
+
+.prev {
+    float: left;
+    margin-left: 10px;
+}
+
+.next {
+    margin-right: 10px;
+    float: right;
+}
+
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+.carousel-arrow {
+    filter: invert(100%) sepia(99%) saturate(2%) hue-rotate(216deg) brightness(105%) contrast(100%);
+    width:30px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #3a3a3a3d;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+    box-shadow:  0px 0px 15px 0px rgba(0,0,0,0.15);
+}
+
+.dot:hover {
+    background-color: var(--main);
+}
+.active {
+    transform: translateY(-2px);
+    background-color: var(--main);
+}
+
+.image-strip {
+    background-color: var(--dark);    
+    width:100%;
+    height:40px;
+    padding-top: 20px;
+    border-top: solid #3a3a3a3d 2px;
+    transform: translateY(-6px);
+}
+.legacy-mainmenu-button {
+    width:fit-content; 
+    float: right; 
+    background-color: var(--dark); 
+    color:var(--main); 
+    padding:8px;
+    border-radius:10px;
+    box-shadow:  0px 0px 2px 0px var(--main-inv);
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.legacy-mainmenu-button:hover {
+    background-color: var(--main-inv);
+    color:var(--main); 
+    box-shadow:  0px 0px 15px 0px var(--main-inv);
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.extras-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.window {
+    border-style:solid;
+    padding:10px 10px;
+    border-radius: 20px;
+    background-color: var(--translucent-main);
+    border-color: var(--border);
+    border-width: 2px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15); 
+    height:400px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.extras-grid .window{
+    width:400px;
+}
+
+.githubchart {
+    height:min-content;
+}
+
+.eighteightwindow {
+    height:min-content; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-evenly;
+}
+
+.mobile-chat {
+    height:fit-content;
+}
+
+@media only screen and (max-width: 680px) {
+    .disclaimer {
+        display:none;
+    }
+}   
+@media only screen and (max-width: 610px) {
+    .content {
+        flex-direction: column;
+        margin:0;
+        width:100vw;
+    }
+
+    .carousel {
+        margin-right: 0px;
+        width:0;
+    }
+    
+    .mainmenu {
+        width:100vw;
+        justify-content: center;
+    }
+
+    .gallery {
+        grid-template-columns: 0fr 1fr;
+    }
+
+    .navbar {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns:1fr;
+        width:100vw;
+        border-radius:0;
+    }
+
+    #title-img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        margin-left: auto;
+        margin-right: auto;
+        padding:0;
+        width:min-content
+    }
+
+
+    /* .extras-grid {
+        flex-direction: column;
+        justify-content: center;
+    } */
+
+    .eighteightwindow {
+        flex-direction: column; 
+    }
+    
+
+}

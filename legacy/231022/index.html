@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/index.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="/img/favicon/cat.ico">
+    
+    <!-- Include this to make the og:image larger -->
+    <meta property="og:title" content="sushiwt's website" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://whytee.xyz" />
+    <meta property="og:image" content="http://whytee.xyz/legacy/230525/images/github.png" />
+    <meta property="og:description" content="a personal website from a guy that doesn't know what they want to be"/>
+    <meta name="theme-color" content="#65995F">
+    <title>sushiwt's home</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="mainmenu">
+            <div class="navbar">
+                <div class="title">
+                    <img src="/img/ezgif.com-crop.gif" height="55px" id="title-img">
+                    <h1></h1>
+                </div>
+                <div class="buttons">
+                    <div class="buttonset">
+                        <a href="https://sushiwt.tumblr.com"><img src="/img/btnicons/document-text-svgrepo-com.svg"></a>
+                        <a href="/artwork/"><img src="/img/btnicons/gallery-svgrepo-com.svg"></a>
+                        <a href="https://sushiwt.itch.io"><img src="/img/btnicons/gamepad-minimalistic-svgrepo-com.svg"></a>
+                        <a href="/myself/"><img src="/img/btnicons/user-circle-svgrepo-com.svg"></a>
+                        <a href="/misc/"><img src="/img/btnicons/global-svgrepo-com.svg"></a>
+                    </div>
+                    <div id="switch" class="qna">
+                        <div class="dm-switch">
+                            <img src="/img/btnicons/moon-svgrepo-com.svg">
+                        </div>
+                    </div>
+                    <script>
+                        const button = document.getElementById('switch');
+                        const titleImage = document.getElementById('title-img');
+                        const root = document.querySelector(':root');
+                        const queryString = window.location.search;
+                        var checkbtn = 1
+        
+                        function addParameter(key, value) {
+                            let url = new URL(window.location.href);
+                            url.searchParams.set(key, value);
+                            window.history.replaceState({}, '', url.href);
+                        }
+                        function resetParameters() {
+                            let url = new URL(window.location.href);
+                            url.search = '';
+                            window.history.replaceState({}, '', url.href);
+                        }
+        
+                        if (queryString == '?dark=true') {
+                            checkbtn = 0
+                        } else {
+                            resetParameters()
+                        }
+        
+                        rawr()
+                        console.log(queryString);
+        
+                        function rawr() {
+                            if (checkbtn == 0) {
+                                button.className = 'qna qna-on'
+                                titleImage.className = 'inv-title'
+                                addParameter('dark',true);
+                                checkbtn = 1
+                                root.style.setProperty('--main', '#000');
+                                root.style.setProperty('--main-inv', '#fff');
+                                root.style.setProperty('--dark', '#dadada');
+                                root.style.setProperty('--light', '#111111');
+                                root.style.setProperty('--normal', '#808080');
+                                root.style.setProperty('--alt-dark', '#99507F');
+                                root.style.setProperty('--alt-light', '#E6A5CF');
+                                root.style.setProperty('--translucent-main', 'rgba(0, 0, 0, 0.50)');
+                                root.style.setProperty('--alt-translucent-main', 'rgba(255, 255, 255, 0.05)');
+                                root.style.setProperty('--svg-color', 'invert(100%) sepia(99%) saturate(2%) hue-rotate(216deg) brightness(105%) contrast(100%)');
+                                root.style.setProperty('--border', '#0f0f0f');
+                            } else if (checkbtn == 1) {
+                                button.className = 'qna'
+                                titleImage.className = ''
+                                resetParameters()
+                                checkbtn = 0
+                                root.style.setProperty('--main', '#fff');
+                                root.style.setProperty('--main-inv', '#565656');
+                                root.style.setProperty('--dark', '#65995F');
+                                root.style.setProperty('--light', '#D6FFD1');
+                                root.style.setProperty('--normal', '#AAE5A4');
+                                root.style.setProperty('--alt-dark', '#99507F');
+                                root.style.setProperty('--alt-light', '#E6A5CF');
+                                root.style.setProperty('--translucent-main', 'rgba(255,255,255,0.50)');
+                                root.style.setProperty('--alt-translucent-main', 'rgba(0, 0, 0, 0.05)');
+                                root.style.setProperty('--svg-color', 'invert(56%) sepia(28%) saturate(572%) hue-rotate(67deg) brightness(93%) contrast(86%) drop-shadow(0px 2px 0px rgba(4, 83, 0, 0.205))');
+                                root.style.setProperty('--border', '#D6FFD1');
+                            }
+                        }
+        
+                        button.addEventListener('click', function handleClick() {
+                            rawr()
+                        });
+                    </script>
+                </div>
+                <div></div>
+            </div>
+        
+        
+            <div style="display:grid; grid-template-columns: 1fr 1fr;">
+                <h1>Welcome to my website!</h1>
+                <div>
+                    <a href="/legacy">
+                        <div class="legacy-mainmenu-button">&nbsp;Visit /legacy&nbsp;
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="carousel">
+                    <div class="mySlides fade">
+                        <div id="c_widget" style="border-radius:10px; height:326px;">
+                            <script src="/misc/comment-widget/comment-widget-pink/comment-widget.js"></script>
+                        </div>
+                    </div> 
+                    <div class="mySlides fade">
+                        <img src="/img/placeholder/cat2.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="/img/art/5Y8f+v.png" style="image-rendering: pixelated;">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="/img/placeholder/cat3.webp">
+                    </div>
+                    
+                    <div class="image-strip">
+                        <div style="display:flex; align-items:center; justify-content: center;">
+                            <div class="dot" onclick="currentSlide(1)"></div>
+                            <div class="dot" onclick="currentSlide(2)"></div>
+                            <div class="dot" onclick="currentSlide(3)"></div>
+                            <div class="dot" onclick="currentSlide(4)"></div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)"><img src="/img/btnicons/map-arrow-left-svgrepo-com.svg" class="carousel-arrow"></a>
+                        <a class="next" onclick="plusSlides(1)"><img src="/img/btnicons/map-arrow-right-svgrepo-com.svg" class="carousel-arrow"></a>
+                    </div>
+                    
+                    <script>
+                        let slideIndex = 1;
+                        showSlides(slideIndex);
+                        
+                        function plusSlides(n) {
+                          showSlides(slideIndex += n);
+                        }
+                        
+                        function currentSlide(n) {
+                          showSlides(slideIndex = n);
+                        }
+                        
+                        function showSlides(n) {
+                          let i;
+                          let slides = document.getElementsByClassName("mySlides");
+                          let dots = document.getElementsByClassName("dot");
+                          if (n > slides.length) {slideIndex = 1}
+                          if (n < 1) {slideIndex = slides.length}
+                          for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                          }
+                          for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                          }
+                          slides[slideIndex-1].style.display = "block";
+                          dots[slideIndex-1].className += " active";
+                        } 
+                    </script>
+                </div>
+
+
+                <div class="description">
+                    <div class="desc-image">
+                        <img src="/img/slooshi.png">
+                    </div>
+                        <div class="desc-text">
+                            <p>Hey there! My name is sushiwt, but you can call me sushi  :3 <br><br>
+                            I am a game developer, 3d modeller, artist, web designer, or whatever I am feeling atm <br><br>
+                            I made this website because I wanted a place where I can show off things I made, kinda like a portfolio.<br><br>
+                            Hope you enjoy my stuff!</p>
+                        </div>
+                        <div class="social-media-set">
+                            <h1 style="margin-bottom: 5px; font-size: 16px;">My main social media:</h1>
+                            <div class="set-button-social">
+                                <div class="social-button">
+                                    <a href="https://youtube.com/sushiwth" target="_blank">YouTube</a>
+                                </div>
+                                <div class="social-button">
+                                    <a href="https://twitter.com/sushiwth" target="_blank">Twitter</a>
+                                </div>
+                                <div class="social-button">
+                                    <a href="https://sushiwt.tumblr.com/" target="_blank">Tumblr</a>
+                                </div>
+                                <div class="social-button">
+                                    <a href="https://sushiwt.itch.io" target="_blank">Itch</a>
+                                </div>
+                                <div class="social-button">
+                                    <a href="https://bsky.app/profile/whytee.xyz" target="_blank">Bluesky</a>
+                                </div>
+                                <div class="social-button">
+                                    <a href="/misc/socials.html" target="_blank">+</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <br>
+            <div class="window githubchart">
+                <img src="https://ghchart.rshah.org/sushiwt" alt="2016rshah's Github chart" style="width:100%; filter: opacity(80%);"/>
+                <p align="center">sushiwt GitHub Contribution Graph (graph by <a href="https://rshah.org">rshah.org</a>)</p>
+            </div>
+            <br>
+            <div class="extras-grid">
+                <div class="window">
+                    <a href="https://gamejolt.com/games/UTA/893672" align="center" style="text-decoration: none;">
+                        <img src="/img/art/aVNEBi.png" style="width:100%; height:80%; border-radius:10px;">
+                        &nbsp;
+                        <p align="center">Games I'm working on/for:</p>
+                        <h1 align="center">Undertale Amethyst</h1> 
+                    </a>
+                </div>
+                &nbsp;&nbsp;&nbsp;
+                <div class="window" align="center">
+                    <h1 style="margin: 5px; margin-top:10px; font-size: 16px; line-height:24px;">
+                        If you like this website, feel free to add this button on yours to link back!
+                    </h1>
+                    <a href="https://whytee.xyz"><img src="/img/88x31/whytee.xyz.gif"></a>
+                    <h1 style="margin: 5px; font-size: 16px; line-height:24px;">
+                        Store it on your own server.
+                    </h1>
+                    <hr style="margin:22px 0 15px 0; border-color:var(--dark); border-style:solid;"> 
+                    <h1 style="margin: 5px; font-size: 16px; line-height:24px;">
+                        Here are some other buttons <br> affiliated with me: 
+                    </h1>
+                    <a href="https://sc36.net"><img src="/img/88x31/sc36.net.gif"></a>
+                    <a href="https://youtube.com/@daytell"><img src="/img/88x31/dayteller.gif"></a>
+                    <hr style="margin:22px 0 15px 0; border-color:var(--dark); border-style:solid;"> 
+                    <h1>aughhsgh here's some text cuz i dont knopw what to put here hiii !!!</h1>
+                </div>
+            </div>
+            <br>
+            <div class="window eighteightwindow">
+                    <a href="https://whytee.xyz"><img src="/img/88x31/whytee.xyz.gif"></a>
+                    <a href="https://sushiwt.neocities.org"><img src="/img/88x31/sushiwt.neocities.org.webp"></a>
+                    <a href="https://w3schools.com"><img src="/img/88x31/w3schools.com.gif"></a>
+                    <a href="https://youtube.com/@daytell"><img src="/img/88x31/dayteller.gif"></a>
+                    <a href="https://sugarforbrains.neocities.org"><img src="/img/88x31/sugarforbrains.neocities.org.gif"></a>
+                    <a href="https://adilene.net"><img src="/img/88x31/adilene.net.png"></a>
+                    <a href="https://neoratz.neocities.org.gif"><img src="/img/88x31/neoratz.neocities.org.gif"></a>
+                    <a href="https://mozilla.org/en-GB/firefox"><img src="/img/88x31/mozilla.org.gif"></a>
+
+            </div>
+            <br>
+            <div align="center">
+                <div class="window" style="width:fit-content;height:min-content; color:var(--main-inv)">
+                    &nbsp;&nbsp; made by sushiwt, 2024-2025. &nbsp;&nbsp;
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <div style="
+    font-family:'Ubuntu';
+    position:fixed;
+    bottom:0;
+    border-style:solid;
+    padding:10px 20px;
+    margin:10px;
+    border-radius: 10px;
+    background-color: var(--translucent-main);
+    border-color: var(--border);
+    backdrop-filter:blur(20px);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+    font-size: 12px;" class="disclaimer">
+        <h1 style="font-size:20px">
+          This website is still under construction :3
+        </h1>
+        <p style="margin:10px; color:var(--main-inv); ">
+            I started making my personal website back in 2022, and at the same time, I'm learning how <br>
+            html, css, and javascript works, and it's so fun, so thank you for joining me in my journey <3 <br> <br>
+            To visit the legacy sites, go to <a href="/legacy">
+            https://whytee.xyz/legacy</a>, as this is not finished (yet).
+        </p> 
+    </div>
+</body>
+</html>
