@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/index.css" rel="stylesheet" type="text/css" media="all">
     <link rel="icon" type="image/x-icon" href="/img/favicon/cat.ico">
     
     <!-- Include this to make the og:image larger -->
@@ -15,6 +14,260 @@
     <meta name="theme-color" content="#65995F">
     
     <title>sushiwt's home</title>
+    <style>
+        :root {
+            /* box variables */
+            --box-radius: 20px;
+            --box-content-padding: 10px;
+            --box-content-radius: calc(var(--box-radius) - var(--box-content-padding)) ;
+            --outline: #00000007;
+
+            /* color variables */
+            --main: #fff;
+            --main-inv: #565656;
+            --dark: #65995F;
+            --light: #D6FFD1;
+            --normal: #AAE5A4;
+            --alt-dark: #99507F;
+            --alt-light: #E6A5CF;
+            --translucent-main: rgba(255,255,255,0.50);
+            --svg-color: invert(56%) sepia(28%) saturate(572%) hue-rotate(67deg) brightness(93%) contrast(86%) drop-shadow(0px 2px 0px rgba(4, 83, 0, 0.205));
+        }
+
+        body {
+            font-family: 'Ubuntu';
+            margin:10px; 
+
+            background-image: 
+                radial-gradient(var(--light) 30%, transparent 30%),
+                radial-gradient(var(--light) 30%, transparent 30%);
+            background-position: 0px 0px, 104px 104px;
+            background-size: 208px 208px;
+            animation: scrollBackground 15s linear infinite;
+            
+        }
+
+        @font-face {
+            font-family: 'Ubuntu';
+            src: url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff2'),
+                url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff');
+        }
+
+        @keyframes scrollBackground {
+            100% {
+                background-position: 104px 104px, 208px 208px;
+            }
+        }
+
+        p {
+            color:var(--main-inv); 
+            font-size: 12px;
+        }
+
+        h1 {
+            font-weight: normal;
+            color:var(--dark);
+            font-size:28px;
+            text-shadow: 0px 2px 0px rgba(4, 83, 0, 0.205)
+        }
+
+        a {
+            color:var(--dark);
+            text-decoration: none;
+        }
+
+        #content {
+            width: 800px;
+            margin: 0 auto 0 auto; 
+        }
+
+        /* reusable designs and styles */
+        .box {
+            background-color: var(--translucent-main);
+            border-radius: var(--box-radius); 
+            outline: 2px solid var(--light); 
+            backdrop-filter: blur(20px);
+            box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+            margin-bottom: 15px;
+        }
+
+        .long-box .box {
+            padding:10px;
+        }
+
+        .three-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 10px;
+        }
+
+        .three-boxes .box {
+            padding:10px;
+            line-height: 0;
+        }
+
+        .three-boxes .box h1 {
+            font-size:18px;
+            line-height: 10px;
+        }
+
+        .text-only-box {
+            margin-bottom:60px;
+        }
+
+        .text-only-box .box {
+            color: var(--main-inv);
+            width:fit-content;
+            padding:10px 20px;
+        }
+
+        /* element specific ids */
+        #navbar {
+            height:75px; 
+            margin-bottom:50px;
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+        }
+
+        #navbar-title {
+            margin:12px 30px; 
+        }
+
+        #navbar-buttons {
+            margin:auto 30px auto auto; 
+        }
+
+        #navbar-buttons-set {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-column-gap: 24px;
+        }
+
+        #navbar-buttons-set img {
+            width: 28px;
+            filter: var(--svg-color);
+        }
+
+        #title {
+            line-height:8px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px; 
+
+            margin-bottom:4px;
+        }
+
+        #title-button {
+            background-color:var(--dark);
+            color:var(--main); 
+            width:fit-content;
+            margin-left: auto;
+            margin-bottom: auto;
+            padding: 15px 12px;
+            outline-color: #fff;
+            outline-width: 0px;
+            outline-style: solid;
+            border-radius:10px;
+            transition: background-color 0.1s, color 0.1s, box-shadow 0.1s;
+        }
+
+        #title-button:hover {
+            background-color: black;
+            color:var(--main); 
+            box-shadow:  0px 0px 15px 0px black;
+            outline-width: 2px;
+        }
+
+        #info-box { 
+            height:380px;  
+            padding:var(--box-content-padding);
+
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-column-gap: 10px;
+        }
+
+        #info-box div {
+            border-radius: var(--box-content-radius);
+        }
+
+        #info-box-bio { 
+            /* until i find a way to move the social media
+            buttons to the bottom, this is the best i could do. */
+            display:grid;
+            grid-template-rows: 1fr;
+        }
+
+        #info-box-image {
+            border-top-right-radius:var(--box-content-radius);
+            border-top-left-radius:5px;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+        }
+
+        #info-box-text {
+            margin-bottom: auto;
+        }
+
+        #info-box-text p {
+            padding-right: 10px;
+            margin:0;
+        }
+
+        #info-box-socials h1 {
+            font-size: 16px; 
+            margin-bottom: 5px;
+        }
+
+        #info-box-socials-links {
+            display:flex;
+            font-size:12px;
+        }
+
+        #info-box-socials-links a {
+            background-color: var(--dark);
+            color: white;
+            padding:3px 8px; 
+            margin-right: 3px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        /* special classes for specific contents in boxes */
+        #utamethyst-image {
+            width:100%; 
+            height:80%; 
+            margin-bottom: 5px;
+            border-radius: var(--box-content-radius);
+        }
+
+        #double8x31 {
+            display:flex;
+            justify-content: space-evenly;
+        }
+
+        #double8x31 {
+            display:flex;
+            justify-content: space-evenly;
+        }
+
+        #double8x31 a {
+            width:88px;
+            height:31px;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+        }
+
+        #disclaimer .box {
+            padding: 10px 20px;
+            width:fit-content
+        }
+    </style>
 </head>
 <body>
     <div id="content">
