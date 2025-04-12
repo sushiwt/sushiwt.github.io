@@ -1,0 +1,75 @@
+body {
+    font-family:'Ubuntu';
+    color: #65995F; 
+}
+
+h1 {
+    font-size:16px;
+    line-height:6px;
+}
+
+.commit {
+    background: #EAF2F5;
+    border-bottom: 1px solid #bee7c0;
+    border-left: 1px solid #bee7c0;
+    border-right: 1px solid #bee7c0;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0 0.7em 0.7em 0.7em;
+    margin-bottom:10px;
+    position: relative;
+}
+
+.commit:first-child {
+    border-top: 1px solid #bee7c0;
+}
+
+.commit a {
+    text-decoration: none;
+}
+
+.commit a:hover {
+    text-decoration: underline;
+}
+
+.commit .author {
+    font-family: 'Ubuntu';
+    margin-top: 0.7em;
+}
+
+.commit .author .name {
+    line-height: 1.5em;
+}
+
+.commit .author .date {
+    font-size: 90%;
+    line-height: 1em;
+}
+
+.commit .message { 
+    margin-top:4px; 
+    font-family: 'Ubuntu'; 
+    font-size: 80%;
+    float: left;
+}
+
+.commit .message a {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font: 12px 'Ubuntu';
+    color: rgb(65, 65, 65);
+    line-height: 1.4em;
+}
+
+.commit .message pre a,
+.commit .author .name a {
+    color:#65995F;
+}
+
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff2'),
+        url('/misc/ubuntu-font/Ubuntu-Bold.woff') format('woff');
+}
+
