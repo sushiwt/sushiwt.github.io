@@ -105,6 +105,10 @@ a {
 }
 
 /* element specific ids */
+#title-mobile {
+    display:none;
+}
+
 #navbar { 
     margin-bottom:50px;
     display:grid;
@@ -263,59 +267,6 @@ a {
 }
 
 
-@media only screen and (max-width: 850px) { 
-    #content {
-        width:400px;
-    }
-
-    #title {
-        line-height:0;
-        grid-template-columns: 2fr 1fr; 
-        grid-template-rows: 1fr;  
-        margin-bottom:6px;
-    }
-    
-    #title h1 {
-        font-size:22px; 
-    }
-
-    #title-button {
-        margin-left:auto;
-        font-size:14px; 
-    }
-
-    .three-boxes {
-        display:flex;
-        flex-direction: column;
-    }
-
-    #navbar {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-    }
-
-    #navbar-title {
-        margin: 12px auto 0 auto;
-    }
-
-    #navbar-buttons {
-        margin:auto;  
-    }
-
-    #navbar-buttons-set {
-        grid-template-columns: repeat(6, 1fr);
-        grid-column-gap: 0;
-    }
-
-    #info-box-bio {
-        margin:0 30px;  
-    }
-
-    #info-box-carousel {
-        display:none;
-    }
-}
-
 
 
 /* code from the old site */
@@ -357,4 +308,85 @@ a {
  
 .inv-title {
     filter: brightness(3)
+}
+
+@media only screen and (max-width: 850px) { 
+
+    #content {
+        width:345px;
+    }
+
+    #title-mobile { 
+        padding:10px;
+        display:flex; 
+        justify-content: center;
+    }
+
+    #title-mobile img {
+        height:90px; 
+    }
+
+    #title {
+        line-height:0;
+        grid-template-columns: 2fr 1fr; 
+        grid-template-rows: 1fr;  
+        margin-top:50px;
+        margin-bottom:8px;
+    }
+    
+    #title h1 {
+        font-size:19px; 
+    }
+
+    #title-button {
+        margin-left:auto;
+        font-size:12px; 
+    }
+
+    .three-boxes {
+        display:flex;
+        flex-direction: column;
+    }
+
+    #navbar {
+        position:fixed;
+        width:100%;
+        height:120px; 
+        left:0;
+        bottom:-100px;
+        z-index: 1;
+        border-radius: 0;
+        background-color: var(--main);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    #navbar-title {
+        display:none;
+        margin: 12px auto 0 auto;
+    }
+
+    #navbar-buttons {
+        margin-right:auto
+    }
+
+    #navbar-buttons-set {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    #info-box-carousel {
+        display:none;
+    }
+
+    #info-box-image {
+        border-top-left-radius:var(--box-content-radius);
+    }
+
+    #made-by-message {
+        margin-bottom:100px; 
+    }
+
+    .qna {
+        width: 20px; 
+    }
 }
