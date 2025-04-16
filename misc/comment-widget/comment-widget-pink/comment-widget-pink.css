@@ -200,3 +200,19 @@
     margin-right: 4px;
     margin-left: 4px;
 }
+
+.c-nameowner {
+    background-color: rgb(255, 192, 224);
+    color:black;
+    padding: 3px 6px; 
+    display: inline-block;
+    margin: 0;
+    margin-right: 10px;
+    border-radius: 6px;
+}
+
+.c-owner {
+    color:rgb(87, 87, 87);
+    border-radius: 6px;
+    text-transform: lowercase;
+}

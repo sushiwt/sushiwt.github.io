@@ -59,7 +59,7 @@ const s_submitButtonLabel = 'Submit';
 const s_loadingText = 'Loading comments...';
 const s_noCommentsText = 'No comments yet!';
 const s_closedCommentsText = 'Comments are closed temporarily!';
-const s_websiteText = 'Website'; // The links to websites left by users on their comments
+const s_websiteText = 'website'; // The links to websites left by users on their comments
 const s_replyButtonText = 'Reply'; // The button for replying to someone
 const s_replyingText = 'Replying to'; // The text that displays while the user is typing a reply
 const s_expandRepliesText = 'Show Replies';
@@ -359,6 +359,11 @@ function displayComments(comments) {
 // Create basic HTML comment, reply or not
 function createComment(data) {
     let comment = document.createElement('div');
+    let isTheCommentTheOwner = false;
+
+    if (data.Name == '' && data.Website == 'the website owner :3') {
+        isTheCommentTheOwner = true
+    }
 
     // Get the right timestamps
     let timestamps = convertTimestamp(data.Timestamp);
@@ -378,6 +383,11 @@ function createComment(data) {
     name.className = 'c-name';
     comment.appendChild(name);
 
+    if (isTheCommentTheOwner) {
+        name.innerText = 'sushiwt'
+        name.className = 'c-nameowner';
+    }
+
     // Timestamp
     let time = document.createElement('span');
     time.innerText = timestamp;
@@ -387,10 +397,16 @@ function createComment(data) {
     // Website URL, if one was provided
     if (data.Website) {
         let site = document.createElement('a');
-        site.innerText = s_websiteText;
-        site.href = data.Website;
-        site.className = 'c-site';
+        site.innerText = data.Website;
         comment.appendChild(site);
+
+        if (isTheCommentTheOwner) {
+            site.className = 'c-owner';
+            site.innerText = 'the webmaster :3';
+        } else {
+            site.className = 'c-site';
+            site.href = data.Website;
+        }
     }
 
     // Text content
