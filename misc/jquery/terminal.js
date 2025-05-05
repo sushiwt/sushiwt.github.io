@@ -95,6 +95,11 @@ $(function() {
                 this.echo('oops! thats not a value in "go". try again!')
             }
         },
+        hawk: function(value) {
+         if (value == 'tuah') {
+            this.echo('hailey welch');
+         }
+        },
         neofetch: function() {
             console.log(navigator.userAgent)
             this.echo('');
