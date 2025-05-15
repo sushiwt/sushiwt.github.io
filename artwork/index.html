@@ -43,10 +43,11 @@
             cursor: pointer; /* Add a pointer on hover */
         }
         #overlay {
+            backdrop-filter:blur(20px);
             color:white;
             image-rendering:pixelated;
             position: fixed; /* Sit on top of the page content */
-            display: none; /* Hidden by default */
+            display: flex; /* Hidden by default */
             width: 100%; /* Full width (cover the whole page) */
             height: 100%; /* Full height (cover the whole page) */
             top: 0;
@@ -54,23 +55,34 @@
             right: 0;
             bottom: 0;
             margin: auto;
-            background-color: rgba(0,0,0,0.75); /* Black background with opacity */
+            background-color: rgba(0, 0, 0, 0.80); /* Black background with opacity */
             z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            pointer-events:none;
             gap:20px;
+            opacity:0%;
+            transition: opacity 0.1s linear;
         }
 
         #image-overlay {
-            max-width:80%;
-            max-height:80%;
-            border-radius:10px;
+            max-width:60%;
+            max-height:60%;
+            border-radius:5px;
+        }
+
+        #image-info {
+            text-align:center;
+            margin:0 10px;
+            max-width:500px;
+            line-height:1.25;
         }
     </style>
     <script>
-        function on(path, title) {
-            document.getElementById("overlay").style.display = "flex";
+        function on(path, alt) {
+            document.getElementById("overlay").style.opacity = "100%";
+            document.getElementById("overlay").style.pointerEvents = "visible";
 
             var imageoverlay = document.getElementById("image-overlay");
             var imagelocation = document.getElementById("image-location");
@@ -78,33 +90,73 @@
 
             imageoverlay.src = path;
             imagelocation.textContent = path;
-            imageinfo.textContent = title;
+            imageinfo.textContent = alt;
         }
 
         function off() {
-            document.getElementById("overlay").style.display = "none";
+            document.getElementById("overlay").style.opacity = "0%";
+            document.getElementById("overlay").style.pointerEvents = "none";
         }
     </script>
 </head>
 <body>
-    <p align="center">&nbsp;&nbsp;&nbsp;sorted by date. click for the real size and additional information</p>
+    <p align="center">&nbsp;&nbsp;&nbsp;sorted by date. click for the real size and additional information</p> 
     <div class="gallery">
-        <img onclick="on(src, title)" src="/img/artwork/red_and_blue.png" title="Created in 2025-01-23">
-        <img onclick="on(src, title)" src="/img/artwork/flower.png" title="Created in 2024-11-02">
-        <img onclick="on(src, title)" src="/img/artwork/painfully_blue.png" title="Created in 2024-10-29">
-        <img onclick="on(src, title)" src="/img/artwork/omars_birthday.png" title="Created in 2024-10-16">
-        <img onclick="on(src, title)" src="/img/artwork/emo_ramo.png" title="Created in 2024-10-16">
-        <img onclick="on(src, title)" src="/img/artwork/implosion.png" title="Created in 2024-02-12">
-        <img onclick="on(src, title)" src="/img/artwork/eyes.png" title="Created in 2024-02-12">
-        <img onclick="on(src, title)" src="/img/artwork/shackles.png" title="Created in 2024-02-06">
-        <img onclick="on(src, title)" src="/img/artwork/am_i_weird.png" title="Created in 2024-01-29">
-        <img onclick="on(src, title)" src="/img/artwork/ryan.png" title="Created in 2024-01-24">
+        <img onclick="on(src, alt)" src="/img/artwork/red_and_blue.png" alt="Created in 2025-01-23. 
+            I created this when I broke up with my boyfriend for the first time. 
+            We were still working on Undertale Switched together, so I used the
+            red and cyan color the main character's SOUL used (although in hindsight
+            these are definitely the wrong colors) and created art based on that.
+            The image is filled with quotes based on memories and sayings. ">
+        <img onclick="on(src, alt)" src="/img/artwork/flower.png" alt="Created in 2024-11-02.
+            I really really felt like shit for no reason whatsoever, so I drew this.
+            The image depicts a flower in a puddle of oil with roots surrounding it.
+            One of the petals have been taken off, spewing out noise and static.">
+        <img onclick="on(src, alt)" src="/img/artwork/painfully_blue.png" alt="Created in 2024-10-29.
+            The image depicts an abstract blue surface with
+            squiggles and body parts of various shapes. I forgot why I made this one. ">
+        <img onclick="on(src, alt)" src="/img/artwork/omars_birthday.png" alt="Created in 2024-10-16.
+            I made this as a birthday present for my friend, OmarUTG!!
+            I created a heartfelt message behind his persona but only 
+            his eyes saw it.">
+        <img onclick="on(src, alt)" src="/img/artwork/emo_ramo.png" alt="Created in 2024.
+            An OC I made for an 'object' camp, which was just OmarUTG's 
+            oc, Ramo, but emo. Daytell's discord account used this image
+            as their profile picture for a while.">
+        <img onclick="on(src, alt)" src="/img/artwork/implosion.png" alt="Created in 2024-02-12.
+            A drawing that depicts a weirdly shaped head waving at you. 
+            I was in a very difficult state of mind, so I drew this to 
+            let my feelings out. I drew whatever I felt at that moment.">
+        <img onclick="on(src, alt)" src="/img/artwork/eyes.png" alt="Created in 2024-02-12.
+            A pair of eyes with scribbled pupils looking at you.
+            Not really sure what this means myself, but interpret
+            it however you want to interpet it. Drew it at the same 
+            day as the art after this.">
+        <img onclick="on(src, alt)" src="/img/artwork/shackles.png" alt="Created in 2024-02-06.
+            Bubblegum hair. I drew her in my Japanese teacher's whiteboard and 
+            liked how they look so I colored it in my drawing app. Not entirely
+            sure where the Spotify code leads. The whiteboard version is also my
+            Spotify profile picture.">
+        <img onclick="on(src, alt)" src="/img/artwork/am_i_weird.png" alt="Created in 2024-01-29.
+            didjoey concept album art. I also wrote concept titles for the concept songs: 
+            1. Self-Consciousness-ness
+            2. EMBRACE (ment)
+            3. Thoughts
+            4. idgaf lol
+            5. Where did everyone go?
+            6. Turning Off
+            7. Self-acceptance-tance">
+        <img onclick="on(src, alt)" src="/img/artwork/ryan.png" alt="Created in 2024-01-24.
+            It's me! This was my persona back in 2024 before I went back to Slooshi 
+            (the girl resting her head on her hand in the main page.)
+        ">
     </div>  
     
     <div id="overlay" onclick="off()">
-            <img id="image-overlay" src="" title="">
-            <div id="image-location"></div>
-            <div id="image-info"></div>
+        <div style="color:gray;">(press anywhere to exit)</div>
+        <img id="image-overlay" src="" alt="">
+        <div id="image-location"></div>
+        <div id="image-info"></div>
     </div>
 </body>
 </html>
