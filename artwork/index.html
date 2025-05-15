@@ -29,19 +29,22 @@
         .gallery img {
             float: left;
             width:256px;
-            transition: transform 0.5s ease-in;
+            transition: box-shadow 0.1s ease-in;
             image-rendering:pixelated;
             border-radius: 10px;
             overflow:hidden;
-            
+            box-shadow: 0 0 0 1px rgba(135, 135, 135, 0.114);
+            outline: 2px solid rgb(0, 0, 0); 
         }
 
         .gallery img:hover {
-            transition: transform 0.1s ease-out;
-            transform: translate(0px,-10px);
+            transition: box-shadow 0.1s ease-out;
+            box-shadow: 0 0 0 4px  rgb(0, 255, 162);
             cursor: pointer; /* Add a pointer on hover */
         }
         #overlay {
+            color:white;
+            image-rendering:pixelated;
             position: fixed; /* Sit on top of the page content */
             display: none; /* Hidden by default */
             width: 100%; /* Full width (cover the whole page) */
