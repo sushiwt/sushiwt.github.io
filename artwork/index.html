@@ -12,6 +12,15 @@
             font-family: 'Ubuntu';
         }
 
+        p, h1 {
+            text-align:center;
+        }
+
+        hr {
+            border-color:rgba(255, 255, 255, 0.139);
+            border-style:solid;
+            border-width:2px;
+        }
         
         @font-face {
             font-family: 'Ubuntu';
@@ -20,6 +29,7 @@
         }
 
         .gallery {
+            margin-bottom:32px;
             display:flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -28,7 +38,7 @@
         }
         .gallery img {
             float: left;
-            width:256px;
+            width: 256px;
             transition: box-shadow 0.1s ease-in;
             image-rendering:pixelated;
             border-radius: 10px;
@@ -42,6 +52,11 @@
             box-shadow: 0 0 0 4px  rgb(0, 255, 162);
             cursor: pointer; /* Add a pointer on hover */
         }
+        .sketchfab-embed-wrapper {
+            border-radius:10px; 
+            overflow:hidden
+        }
+
         #overlay {
             backdrop-filter:blur(20px);
             color:white;
@@ -100,7 +115,8 @@
     </script>
 </head>
 <body>
-    <p align="center">&nbsp;&nbsp;&nbsp;sorted by date. click for the real size and additional information</p> 
+    <h1>sushiwt's artwork</h1>
+    <p>sorted by date. click for the real size and additional information</p> 
     <div class="gallery">
         <img onclick="on(src, alt)" src="/img/artwork/red_and_blue.png" alt="Created in 2025-01-23. 
             I created this when I broke up with my boyfriend for the first time. 
@@ -151,6 +167,25 @@
             (the girl resting her head on her hand in the main page.)
         ">
     </div>  
+    <hr> 
+    <h1>3D Models</h1>
+    <div class="gallery">
+        <div class="sketchfab-embed-wrapper"> <iframe title="low-poly giraffe" frameborder="0" allowfullscreen mozallowfullscreen="true"
+            webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+            execution-while-out-of-viewport execution-while-not-rendered web-share width="320" height="240"
+            src="https://sketchfab.com/models/cebc2792d46a42748544030dcddfeb3a/embed?autospin=1&dnt=1"> 
+        </iframe> </div>
+        <div class="sketchfab-embed-wrapper"> <iframe title="3d ruka" frameborder="0" allowfullscreen mozallowfullscreen="true"
+                webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                execution-while-out-of-viewport execution-while-not-rendered web-share width="320" height="240"
+                src="https://sketchfab.com/models/1ed25cec21644ccfbde7929ca6759f3c/embed?autospin=1&dnt=1">
+        </iframe> </div>
+        <div class="sketchfab-embed-wrapper"> <iframe title="the waiting room" frameborder="0" allowfullscreen
+                mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="320"
+                height="240" src="https://sketchfab.com/models/de8e4a12b68c44eaa5e0fa69a75c9bf6/embed?autospin=1&dnt=1">
+        </iframe> </div>
+    </div>
     
     <div id="overlay" onclick="off()">
         <div style="color:gray;">(press anywhere to exit)</div>
