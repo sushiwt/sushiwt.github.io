@@ -27,96 +27,96 @@
             </div>
             <div id="navbar-buttons">
                 <div id="navbar-buttons-set">
-                    <a href="https://sushiwt.tumblr.com"><img src="/img/btnicons/document-text-svgrepo-com.svg"></a>
-                    <a href="/artwork/"><img src="/img/btnicons/gallery-svgrepo-com.svg"></a>
-                    <a href="https://sushiwt.itch.io"><img src="/img/btnicons/gamepad-minimalistic-svgrepo-com.svg"></a>
-                    <a href="/myself/"><img src="/img/btnicons/user-circle-svgrepo-com.svg"></a>
-                    <a href="/misc/"><img src="/img/btnicons/global-svgrepo-com.svg"></a>
+                    <a href="https://sushiwt.tumblr.com"><img src="/img/btnicons/document-text-svgrepo-com.svg"> blog</a>
+                    <a href="/artwork/"><img src="/img/btnicons/gallery-svgrepo-com.svg"> artwork</a>
+                    <a href="https://sushiwt.itch.io"><img src="/img/btnicons/gamepad-minimalistic-svgrepo-com.svg"> games</a>
+                    <a href="/myself/"><img src="/img/btnicons/user-circle-svgrepo-com.svg"> myself</a>
+                    <a href="/misc/"><img src="/img/btnicons/global-svgrepo-com.svg"> misc</a>
                 
-                    <div id="switch" class="qna">
-                        <div class="dm-switch">
-                            <img src="/img/btnicons/moon-svgrepo-com.svg">
-                        </div>
-                    </div>
-                    <script>
-                        const button = document.getElementById('switch');
-                        const titleImage = document.getElementById('navbar-title');
-                        const root = document.querySelector(':root');
-                        const queryString = window.location.search;
-                        var checkbtn = 1
-        
-                        function addParameter(key, value) {
-                            let url = new URL(window.location.href);
-                            url.searchParams.set(key, value);
-                            window.history.replaceState({}, '', url.href);
-                        }
-                        function resetParameters() {
-                            let url = new URL(window.location.href);
-                            url.search = '';
-                            window.history.replaceState({}, '', url.href);
-                        }
-        
-                        if (queryString == '?dark=true') {
-                            checkbtn = 0
-                        } else {
-                            resetParameters()
-                        }
-        
-                        rawr()
-                        console.log(queryString);
-        
-                        function rawr() {
-                            if (checkbtn == 0) {
-                                button.className = 'qna qna-on'
-                                titleImage.className = 'inv-title'
-                                addParameter('dark',true);
-                                checkbtn = 1
-                                root.style.setProperty('--main', '#000');
-                                root.style.setProperty('--main-inv', '#fff');
-                                root.style.setProperty('--dark', '#dadada');
-                                root.style.setProperty('--light', '#111111');
-                                root.style.setProperty('--normal', '#808080');
-                                root.style.setProperty('--alt-dark', '#99507F');
-                                root.style.setProperty('--alt-light', '#E6A5CF');
-                                root.style.setProperty('--translucent-main', 'rgba(0, 0, 0, 0.50)');
-                                root.style.setProperty('--alt-translucent-main', 'rgba(255, 255, 255, 0.05)');
-                                root.style.setProperty('--svg-color', 'invert(100%) sepia(99%) saturate(2%) hue-rotate(216deg) brightness(105%) contrast(100%)');
-                                root.style.setProperty('--border', '#0f0f0f');
-                            } else if (checkbtn == 1) {
-                                button.className = 'qna'
-                                titleImage.className = ''
-                                resetParameters()
-                                checkbtn = 0
-                                root.style.setProperty('--main', '#fff');
-                                root.style.setProperty('--main-inv', '#565656');
-                                root.style.setProperty('--dark', '#65995F');
-                                root.style.setProperty('--light', '#D6FFD1');
-                                root.style.setProperty('--normal', '#AAE5A4');
-                                root.style.setProperty('--alt-dark', '#99507F');
-                                root.style.setProperty('--alt-light', '#E6A5CF');
-                                root.style.setProperty('--translucent-main', 'rgba(255,255,255,0.50)');
-                                root.style.setProperty('--alt-translucent-main', 'rgba(0, 0, 0, 0.05)');
-                                root.style.setProperty('--svg-color', 'invert(56%) sepia(28%) saturate(572%) hue-rotate(67deg) brightness(93%) contrast(86%) drop-shadow(0px 2px 0px rgba(4, 83, 0, 0.205))');
-                                root.style.setProperty('--border', '#D6FFD1');
-                            }
-                        }
-        
-                        button.addEventListener('click', function handleClick() {
-                            rawr()
-                        });
-                    </script>
-                    
                 </div>
             </div>
         </div>
         <div id="title">
             <h1>Welcome to my website!</h1>
 
-            <a href="/legacy">
-                <div id="title-button">
-                    Visit /legacy
-                </div>
-            </a>
+                    <div id="dark-mode-switch">
+                        <div id="switch" class="qna">
+                            <div class="dm-switch">
+                                <img src="/img/btnicons/moon-svgrepo-com.svg">
+                                &nbsp;&nbsp;Dark Mode&nbsp;
+                            </div>
+                        </div>
+                        <script>
+                            const button = document.getElementById('switch');
+                            const titleImage = document.getElementById('navbar-title');
+                            const root = document.querySelector(':root');
+                            const queryString = window.location.search;
+                            var checkbtn = 1
+            
+                            function addParameter(key, value) {
+                                let url = new URL(window.location.href);
+                                url.searchParams.set(key, value);
+                                window.history.replaceState({}, '', url.href);
+                            }
+                            function resetParameters() {
+                                let url = new URL(window.location.href);
+                                url.search = '';
+                                window.history.replaceState({}, '', url.href);
+                            }
+            
+                            if (queryString == '?dark=true') {
+                                checkbtn = 0
+                            } else {
+                                resetParameters()
+                            }
+            
+                            rawr()
+                            console.log(queryString);
+            
+                            function rawr() {
+                                if (checkbtn == 0) {
+                                    button.className = 'qna qna-on'
+                                    titleImage.className = 'inv-title'
+                                    addParameter('dark',true);
+                                    checkbtn = 1
+                                    root.style.setProperty('--main', '#000');
+                                    root.style.setProperty('--main-inv', '#fff');
+                                    root.style.setProperty('--dark', '#dadada');
+                                    root.style.setProperty('--light', '#111111');
+                                    root.style.setProperty('--highlight', '#070707');
+                                    root.style.setProperty('--normal', '#808080');
+                                    root.style.setProperty('--alt-dark', '#99507F');
+                                    root.style.setProperty('--alt-light', '#E6A5CF');
+                                    root.style.setProperty('--translucent-main', 'rgba(0, 0, 0, 0.50)');
+                                    root.style.setProperty('--alt-translucent-main', 'rgba(255, 255, 255, 0.05)');
+                                    root.style.setProperty('--svg-color', 'invert(100%) sepia(99%) saturate(2%) hue-rotate(216deg) brightness(105%) contrast(100%)');
+                                    root.style.setProperty('--border', '#0f0f0f');
+                                } else if (checkbtn == 1) {
+                                    button.className = 'qna'
+                                    titleImage.className = ''
+                                    resetParameters()
+                                    checkbtn = 0
+                                    root.style.setProperty('--main', '#fff');
+                                    root.style.setProperty('--main-inv', '#565656');
+                                    root.style.setProperty('--dark', '#65995F');
+                                    root.style.setProperty('--light', '#D6FFD1');
+                                    root.style.setProperty('--highlight', '#ebffe8');
+                                    root.style.setProperty('--normal', '#AAE5A4');
+                                    root.style.setProperty('--alt-dark', '#99507F');
+                                    root.style.setProperty('--alt-light', '#E6A5CF');
+                                    root.style.setProperty('--translucent-main', 'rgba(255,255,255,0.50)');
+                                    root.style.setProperty('--alt-translucent-main', 'rgba(0, 0, 0, 0.05)');
+                                    root.style.setProperty('--svg-color', 'invert(56%) sepia(28%) saturate(572%) hue-rotate(67deg) brightness(93%) contrast(86%)');
+                                    root.style.setProperty('--border', '#D6FFD1');
+                                }
+                            }
+            
+                            button.addEventListener('click', function handleClick() {
+                                rawr()
+                            });
+                        </script>
+                    </div>
+                    
         </div> 
         <div id="info-box" class="box"> 
             <div id="info-box-carousel">
@@ -149,17 +149,17 @@
                 </div>
             </div>
         </div>
-        <div class="long-box">
+        <!-- <div class="long-box">
             <div class="box">
                 <img src="https://ghchart.rshah.org/sushiwt" alt="2016rshah's Github chart" style="width:100%; filter: opacity(80%);"/>
                 <p align="center" style="line-height: 0;">sushiwt GitHub Contribution Graph (graph by <a href="https://rshah.org">rshah.org</a>)</p>
             </div>
-        </div>
+        </div> -->
         <div class="three-boxes">
             <div id="utamethyst-box" class="box">
                 <img src="/img/art/aVNEBi.png" id="utamethyst-image">
                 
-                <p align="center">Games I'm working on/for:</p>
+                <p align="center">Game I'm working on/for:</p>
                 <h1 align="center">Undertale Amethyst</h1> 
             </div>
             <div class="box" align="center">
@@ -195,7 +195,7 @@
                 <a href="https://mozilla.org/en-GB/firefox"><img src="/img/88x31/mozilla.org.gif"></a>
             </div>
         </div>
-        <div id="disclaimer" align="center">
+        <!-- <div id="disclaimer" align="center">
             <div class="box"> 
                 <h1 style="font-size:20px">
                 This website is still under construction :3
@@ -207,9 +207,9 @@
                     https://whytee.xyz/legacy</a>, as this is not finished (yet).
                 </p> 
             </div>
-        </div>
+        </div> -->
         <div class="text-only-box" id="made-by-message" align="center">
-            <div class="box">built with firefox/chrome and vscode<hr>made by sushi, 2024 - 2025.</div> 
+            <div class="box">built with firefox/chrome and vscode<hr>made by sushi, 2024 - 2026.</div> 
         </div>
     </div>
 </body>
