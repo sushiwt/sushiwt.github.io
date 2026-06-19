@@ -6,8 +6,6 @@
     --light: #ffe1f5;
     --highlight: #fff0fa;
     --normal: #E6A5CF;
-    --alt-dark: #99507F;
-    --alt-light: #E6A5CF;
     --translucent-main: rgba(255,255,255,0.50);
     --svg-color: brightness(0) saturate(100%) invert(41%) sepia(15%) saturate(1712%) hue-rotate(269deg) brightness(88%) contrast(86%);
 }
