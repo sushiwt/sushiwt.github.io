@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/index.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/theme.css" rel="stylesheet" type="text/css" media="all">
     <link rel="icon" type="image/x-icon" href="/img/favicon/cat.ico">
     
     <!-- Include this to make the og:image larger -->
@@ -13,17 +13,19 @@
     <meta property="og:image" content="http://whytee.xyz/legacy/230525/images/github.png" />
     <meta property="og:description" content="a personal website from a guy that doesn't know what they want to be"/>
     <meta name="theme-color" content="#65995F">
+
+    <link href="css/theme-colors/index.css" rel="stylesheet" type="text/css" media="all">
     
     <title>sushiwt's home</title>
 </head>
 <body>
     <div id="content">
         <div id="title-mobile" class="box">
-            <img src="/img/ezgif.com-crop.gif" height="55px" id="title-img">
+            <img src="/img/logos/index.gif" height="55px" id="title-img">
         </div>
         <div id="navbar" class="box">
             <div id="navbar-title">
-                <img src="/img/ezgif.com-crop.gif" height="55px">
+                <a href="/"><img src="/img/logos/index.gif" height="55px"></a>
             </div>
             <div id="navbar-buttons">
                 <div id="navbar-buttons-set">
@@ -38,85 +40,11 @@
         </div>
         <div id="title">
             <h1>Welcome to my website!</h1>
-
-                    <div id="dark-mode-switch">
-                        <div id="switch" class="qna">
-                            <div class="dm-switch">
-                                <img src="/img/btnicons/moon-svgrepo-com.svg">
-                                &nbsp;&nbsp;Dark Mode&nbsp;
-                            </div>
-                        </div>
-                        <script>
-                            const button = document.getElementById('switch');
-                            const titleImage = document.getElementById('navbar-title');
-                            const root = document.querySelector(':root');
-                            const queryString = window.location.search;
-                            var checkbtn = 1
-            
-                            function addParameter(key, value) {
-                                let url = new URL(window.location.href);
-                                url.searchParams.set(key, value);
-                                window.history.replaceState({}, '', url.href);
-                            }
-                            function resetParameters() {
-                                let url = new URL(window.location.href);
-                                url.search = '';
-                                window.history.replaceState({}, '', url.href);
-                            }
-            
-                            if (queryString == '?dark=true') {
-                                checkbtn = 0
-                            } else {
-                                resetParameters()
-                            }
-            
-                            rawr()
-                            console.log(queryString);
-            
-                            function rawr() {
-                                if (checkbtn == 0) {
-                                    button.className = 'qna qna-on'
-                                    titleImage.className = 'inv-title'
-                                    addParameter('dark',true);
-                                    checkbtn = 1
-                                    root.style.setProperty('--main', '#000');
-                                    root.style.setProperty('--main-inv', '#fff');
-                                    root.style.setProperty('--dark', '#dadada');
-                                    root.style.setProperty('--light', '#111111');
-                                    root.style.setProperty('--highlight', '#070707');
-                                    root.style.setProperty('--normal', '#808080');
-                                    root.style.setProperty('--alt-dark', '#99507F');
-                                    root.style.setProperty('--alt-light', '#E6A5CF');
-                                    root.style.setProperty('--translucent-main', 'rgba(0, 0, 0, 0.50)');
-                                    root.style.setProperty('--alt-translucent-main', 'rgba(255, 255, 255, 0.05)');
-                                    root.style.setProperty('--svg-color', 'invert(100%) sepia(99%) saturate(2%) hue-rotate(216deg) brightness(105%) contrast(100%)');
-                                    root.style.setProperty('--border', '#0f0f0f');
-                                } else if (checkbtn == 1) {
-                                    button.className = 'qna'
-                                    titleImage.className = ''
-                                    resetParameters()
-                                    checkbtn = 0
-                                    root.style.setProperty('--main', '#fff');
-                                    root.style.setProperty('--main-inv', '#565656');
-                                    root.style.setProperty('--dark', '#65995F');
-                                    root.style.setProperty('--light', '#D6FFD1');
-                                    root.style.setProperty('--highlight', '#ebffe8');
-                                    root.style.setProperty('--normal', '#AAE5A4');
-                                    root.style.setProperty('--alt-dark', '#99507F');
-                                    root.style.setProperty('--alt-light', '#E6A5CF');
-                                    root.style.setProperty('--translucent-main', 'rgba(255,255,255,0.50)');
-                                    root.style.setProperty('--alt-translucent-main', 'rgba(0, 0, 0, 0.05)');
-                                    root.style.setProperty('--svg-color', 'invert(56%) sepia(28%) saturate(572%) hue-rotate(67deg) brightness(93%) contrast(86%)');
-                                    root.style.setProperty('--border', '#D6FFD1');
-                                }
-                            }
-            
-                            button.addEventListener('click', function handleClick() {
-                                rawr()
-                            });
-                        </script>
-                    </div>
-                    
+            <a href="/legacy">
+                <div id="title-button">
+                    Visit /legacy
+                </div>
+            </a>
         </div> 
         <div id="info-box" class="box"> 
             <div id="info-box-carousel">
