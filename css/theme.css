@@ -114,6 +114,13 @@ a {
     padding:10px 20px;
 }
 
+.desktop-only {
+    display:inline;
+}
+.mobile-only {
+    display:none;
+}
+
 /* element specific ids */
 #title-mobile {
     display:none;
@@ -196,7 +203,6 @@ a {
 }
 
 #info-box { 
-    height:380px;  
     padding:var(--box-content-padding);
 
     display: grid;
@@ -361,9 +367,24 @@ a {
         margin-right:auto
     }
 
+    #info-box { 
+        padding:var(--box-content-padding);
+
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr ;
+        grid-row-gap: 10px;
+    }
+
+    .desktop-only {
+        display:none;
+    }
+    .mobile-only {
+        display:inline;
+    }
 
     #info-box-carousel {
-        display:none;
+        order:2;
     }
 
     #info-box-image {

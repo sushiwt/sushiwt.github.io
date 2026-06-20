@@ -8,5 +8,5 @@
     --highlight: #fbf0f0;
     --normal: #fcbbbb;
     --translucent-main: rgba(255,255,255,0.50);
-    --svg-color: brightness(0) saturate(100%) invert(50%) sepia(46%) saturate(7405%) hue-rotate(335deg) brightness(129%) contrast(96%);
+    --svg-color: invert(48%) sepia(30%) saturate(1148%) hue-rotate(313deg) brightness(97%) contrast(103%);
 }
