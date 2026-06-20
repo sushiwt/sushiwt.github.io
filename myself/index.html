@@ -6,7 +6,19 @@
     <link href="/css/theme.css" rel="stylesheet" type="text/css" media="all">
     <link href="/css/theme-colors/myself.css" rel="stylesheet" type="text/css" media="all">
 
-    <title>Document</title>
+    <style>
+        #myself-panel {
+            display:flex; 
+        }
+
+        @media only screen and (max-width: 850px) { 
+            #myself-panel {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+    <title>Myself!!</title>
 </head>
 <body>
     <div id="content">
@@ -40,8 +52,8 @@
 
         
         <div class="long-box"> 
-            <div class="box" style="display:grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: 1fr; grid-column-gap: 8px;">
-                <img src="/img/notfound.png" style="border-radius:var(--box-content-radius)">
+            <div class="box" id="myself-panel">
+                <img src="/img/notfound.png" style="border-radius:var(--box-content-radius);">
                 <div>
                     <h1>hey! i'm sushi.</h1>
                     <p>i'm an 18 year old game developer/web developer/3d modeller/artist</p>

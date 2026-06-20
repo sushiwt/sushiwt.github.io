@@ -8,6 +8,7 @@
     --main: #fff;
     --main-inv: #565656;
     --dark: #959595;
+    --dark-highlight: #afafaf;
     --light: #e8e8e8;
     --highlight: #f4f4f4;
     --normal: #c2c2c2;
@@ -146,6 +147,13 @@ a {
     box-shadow: inset 0px -20px 10px 0px var(--highlight), 0px 0px 3px 3px var(--normal);
     border-radius:8px;
     padding:4px;
+    transition: box-shadow 0.5s, transform 0.5s;
+}
+
+#navbar-buttons-set a:hover {
+    box-shadow: inset 0px -18px 10px 0px var(--highlight), 0px 2px 6px 3px var(--normal);
+    transform:translateY(-2px); 
+    transition: box-shadow 0.2s, transform 0.2s;
 }
 
 #navbar-buttons-set img {
@@ -165,24 +173,26 @@ a {
 }
 
 #title-button {
-    background-color:var(--dark);
+    background-color:var(--dark-highlight);
     color:var(--main); 
+
+    box-shadow: inset 0px -20px 10px 0px var(--dark), 0px 0px 2px 1px var(--normal);
+    outline-color: var(--dark);
+    outline-style:solid;
+    outline-offset:-4px;
+
+    border-radius:10px;
     width:fit-content;
     margin-left: auto;
     margin-bottom: auto;
     padding: 15px 12px;
-    outline-color: #fff;
-    outline-width: 0px;
-    outline-style: solid;
-    border-radius:10px;
-    transition: background-color 0.1s, color 0.1s, box-shadow 0.1s;
+    transition: box-shadow 0.5s, transform 0.5s;
 }
 
 #title-button:hover {
-    background-color: black;
-    color:white; 
-    box-shadow:  0px 0px 15px 0px black;
-    outline-width: 2px;
+    box-shadow: inset 0px -18px 10px 0px var(--dark), 0px 2px 4px 1px var(--normal);
+    transform:translateY(-2px); 
+    transition: box-shadow 0.2s, transform 0.2s;
 }
 
 #info-box { 
@@ -232,8 +242,10 @@ a {
 }
 
 #info-box-socials-links a {
-    background-color: var(--dark);
+    background-color: var(--dark-highlight);
     color: var(--main);
+    box-shadow: inset 0px -12px 10px 0px var(--dark), 0px 0px 2px 0px var(--normal);
+
     padding:3px 8px; 
     margin-right: 3px;
     border-radius: 5px;
