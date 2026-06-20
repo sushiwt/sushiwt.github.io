@@ -1,0 +1,12 @@
+:root {
+    /* color variables */ 
+    --main: #fff;
+    --main-inv: #565656;
+    --dark: #fa5c5c;
+    --dark-highlight: #ff7d7d;
+    --light: #ffe3e3;
+    --highlight: #fbf0f0;
+    --normal: #fcbbbb;
+    --translucent-main: rgba(255,255,255,0.50);
+    --svg-color: brightness(0) saturate(100%) invert(50%) sepia(46%) saturate(7405%) hue-rotate(335deg) brightness(129%) contrast(96%);
+}
