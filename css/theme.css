@@ -68,6 +68,11 @@ a {
     text-decoration: none;
 }
 
+/* For older browser compatibility...as if the rest of the website is even compatible hahaha */
+main, nav, section, header, footer {
+    display:block;
+}
+
 #content {
     width: 800px;
     margin: 0 auto 0 auto; 
